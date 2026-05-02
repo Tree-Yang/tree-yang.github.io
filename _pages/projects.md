@@ -2,64 +2,21 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Research-related software and tools
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 4
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+## Research Frameworks
 
-{% else %}
+**DR-PDEE Toolboxes** — MATLAB and Julia toolboxes for dimension-reduced probability density evolution equations. Physically-driven formulations for dynamic reliability analysis.
+[GitHub](https://github.com/JCERSM/DR-PDEE-MATLAB) &middot; [GitHub](https://github.com/JCERSM/DR-PDEE-Julia)
 
-<!-- Display projects without categories -->
+## Method Implementations
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**Process-Oriented PDEM** — MATLAB toolbox for the probability density evolution method. Includes GF-discrepancy-based point selection for stochastic ground motion representation.
+[GitHub](https://github.com/Tree-Yang/Process_Oriented_PDEM) &middot; [GitHub](https://github.com/Tree-Yang/GF-discrepancy-based-point-selection)
 
-  <!-- Generate cards for each project -->
+## Utilities
 
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+Additional research utilities and code implementations are available on [GitHub](https://github.com/Tree-Yang).
