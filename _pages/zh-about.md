@@ -20,7 +20,48 @@ latest_posts:
 
 **杨家树**
 
-西安建筑科技大学土木工程学院师资博士后。2023 年获同济大学博士学位，导师陈建兵教授。2021 年 7 月至 2022 年 7 月在莱布尼兹汉诺威大学联合培养（CSC 资助），外方导师 Michael Beer 教授。2016 年获哈尔滨工业大学学士学位。
+西安建筑科技大学土木工程学院师资博士后。
+
+<div class="about-timeline">
+  <section>
+    <h2>工作经历</h2>
+    <ul>
+      <li>
+        <span class="time">2023&ndash;至今</span>
+        <div>
+          <strong>西安建筑科技大学</strong>
+          <p>土木工程学院，师资博士后</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>教育经历</h2>
+    <ul>
+      <li>
+        <span class="time">2016&ndash;2023</span>
+        <div>
+          <strong>同济大学</strong>
+          <p>土木工程博士，导师陈建兵教授</p>
+        </div>
+      </li>
+      <li>
+        <span class="time">2021&ndash;2022</span>
+        <div>
+          <strong>莱布尼兹汉诺威大学</strong>
+          <p>联合培养博士生，外方导师 Michael Beer 教授</p>
+        </div>
+      </li>
+      <li>
+        <span class="time">2012&ndash;2016</span>
+        <div>
+          <strong>哈尔滨工业大学</strong>
+          <p>土木工程学士</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
 
 我的研究致力于回答一个核心问题：**如何在随机激励下设计既高效又可靠的结构？**
 

@@ -90,6 +90,85 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// About page timeline
+
+.about-timeline {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+  }
+
+  section {
+    border-left: 3px solid rgba(31, 95, 159, 0.28);
+    padding-left: 1rem;
+  }
+
+  h2 {
+    color: #244f7a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: grid;
+    gap: 0.2rem 0.8rem;
+    grid-template-columns: 6.8rem minmax(0, 1fr);
+    margin-bottom: 0.65rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .time {
+    align-self: start;
+    background: #e6f0fb;
+    border: 1px solid #8eb5dc;
+    border-radius: 999px;
+    color: #174a7c;
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.18rem 0.5rem;
+    text-align: center;
+  }
+
+  strong {
+    color: var(--global-text-color);
+    font-weight: 650;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 0.92rem;
+    line-height: 1.35;
+    margin: 0.08rem 0 0;
+  }
+
+  @media (max-width: 575.98px) {
+    li {
+      grid-template-columns: 1fr;
+    }
+
+    .time {
+      justify-self: start;
+    }
+  }
+}
+
 // CV
 
 .cv {
