@@ -27,7 +27,7 @@ latest_posts:
 
 **Jia-Shu Yang** (杨家树)
 
-Faculty-oriented Postdoctoral Fellow at Xi'an University of Architecture and Technology. Ph.D. from Tongji University (2023), advised by Prof. Jian-Bing Chen. Visiting scholar at Leibniz Universit&auml;t Hannover (2021&ndash;2022), co-advised by Prof. Michael Beer.
+Faculty-oriented Postdoctoral Fellow at Xi'an University of Architecture and Technology. Ph.D. from Tongji University (2023), advised by Prof. Jian-Bing Chen. Visiting scholar at Leibniz Universit&auml;t Hannover (2021&ndash;2022), co-advised by Prof. Michael Beer. B.Eng. from Harbin Institute of Technology (2016).
 
 My research addresses a fundamental question: **How to design structures that are both efficient and reliable under stochastic excitations?**
 

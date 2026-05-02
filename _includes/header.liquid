@@ -2,7 +2,7 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
+      {% if page.permalink != '/' and page.permalink != '/zh/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
@@ -42,36 +42,36 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
+
           {% if page.url contains '/zh/' %}
-            {% assign lang_prefix = '/zh' %}
+            {% assign is_zh = true %}
           {% else %}
-            {% assign lang_prefix = '' %}
+            {% assign is_zh = false %}
           {% endif %}
 
-          {% for p_page in site.pages %}
-            {% if lang_prefix == '' %}
-              {% if p_page.permalink == '/' %} {% assign about_title = p_page.title %} {% endif %}
-            {% else %}
-              {% if p_page.permalink == '/zh/' %} {% assign about_title = p_page.title %} {% endif %}
-            {% endif %}
-          {% endfor %}
-
           <!-- About -->
-          <li class="nav-item {% if lang_prefix == '' and page.permalink == '/' %}active{% elsif lang_prefix == '/zh' and page.permalink == '/zh/' %}active{% endif %}">
-            <a class="nav-link" href="{{ lang_prefix | relative_url }}">
-              {{- about_title }}
-              {% if lang_prefix == '' and page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% elsif lang_prefix == '/zh' and page.permalink == '/zh/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
+          <li class="nav-item {% if is_zh and page.permalink == '/zh/' %}active{% elsif is_zh == false and page.permalink == '/' %}active{% endif %}">
+            {% if is_zh %}
+              <a class="nav-link" href="{{ '/zh/' | relative_url }}">
+                关于
+                {% if page.permalink == '/zh/' %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            {% else %}
+              <a class="nav-link" href="{{ '/' | relative_url }}">
+                about
+                {% if page.permalink == '/' %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            {% endif %}
           </li>
 
-          <!-- Other pages -->
+          <!-- Other pages (always English) -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null and p.url contains lang_prefix %}
+            {% if p.nav and p.autogen == null and p.url contains '/zh/' == false %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -147,16 +147,12 @@
               </button>
             </li>
           {% endif %}
-          <!-- Language toggle -->
+          <!-- Language toggle (only switches about page) -->
           <li class="nav-item">
-            {% if page.url == '/zh/' %}
+            {% if is_zh %}
               <a class="nav-link" href="/" title="Switch to English">EN</a>
-            {% elsif page.url contains '/zh/' %}
-              <a class="nav-link" href="{{ page.url | remove_first: '/zh' }}" title="Switch to English">EN</a>
-            {% elsif page.url == '/' %}
-              <a class="nav-link" href="{{ '/zh/' | relative_url }}" title="切换到中文">中</a>
             {% else %}
-              <a class="nav-link" href="{{ page.url | prepend: '/zh' | remove: '//' | relative_url }}" title="切换到中文">中</a>
+              <a class="nav-link" href="{{ '/zh/' | relative_url }}" title="切换到中文">中</a>
             {% endif %}
           </li>
         </ul>

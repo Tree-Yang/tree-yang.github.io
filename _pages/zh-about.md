@@ -46,4 +46,4 @@ latest_posts:
 
 ---
 
-[论文](/zh/publications/) &middot; [项目](/zh/projects/) &middot; [简历](/zh/cv/)
+[Publications](/publications/) &middot; [Projects](/projects/) &middot; [CV](/cv/)
