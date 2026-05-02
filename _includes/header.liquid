@@ -71,7 +71,8 @@
           <!-- Other pages (always English) -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null and p.url contains '/zh/' == false %}
+            {% if p.nav and p.autogen == null %}
+              {% unless p.url contains '/zh/' %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -128,6 +129,7 @@
                 </li>
               {% endif %}
             {% endif %}
+              {% endunless %}
           {% endfor %}
           {% if site.search_enabled %}
             <!-- Search -->
