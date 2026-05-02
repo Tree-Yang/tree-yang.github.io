@@ -16,7 +16,7 @@
   }
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
 
     span {
       font-size: 1.5rem;
@@ -24,11 +24,16 @@
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
+    color: #244f7a;
+    border-top: 2px solid rgba(31, 95, 159, 0.38);
+    padding-top: 1.15rem;
+    margin-top: 2.25rem;
     text-align: right;
+
+    span {
+      font-weight: 600;
+      letter-spacing: 0;
+    }
   }
 
   ol.bibliography {
@@ -37,7 +42,18 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      position: relative;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.05rem;
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: min(46%, 24rem);
+        border-bottom: 1px solid rgba(31, 95, 159, 0.14);
+      }
 
       .preview {
         display: inline-block;

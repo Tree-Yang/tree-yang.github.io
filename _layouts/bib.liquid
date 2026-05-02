@@ -192,6 +192,9 @@
     {% if entry.language == 'Chinese' %}
       {% capture entrytype %}{{ entrytype }}{{ " (in Chinese)" }}{% endcapture %}
     {% endif %}
+    {% if entry.chinese_journal %}
+      {% capture entrytype %}{{ entrytype }}{{ " / " }}{{ entry.chinese_journal }}{% endcapture %}
+    {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
     {% endif -%}

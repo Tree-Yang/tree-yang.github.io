@@ -322,6 +322,7 @@ filtered_bibtex_keywords:
     award_name,
     bibtex_show,
     blog,
+    chinese_journal,
     chinese_title,
     code,
     dimensions,
