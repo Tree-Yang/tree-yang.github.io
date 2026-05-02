@@ -1,10 +1,9 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/Yang_Jiashu_CV.pdf # path to your CV PDF file
 email: yang_jiashu@outlook.com # your email address
 github_username: Tree-Yang # your GitHub username
 scholar_userid: 7jq__N4AAAAJ # your Google Scholar ID
 orcid: 0000-0001-5267-0063 # your ORCID ID
-researchgate_username: Jia-Shu-Yang # your ResearchGate username
+research_gate_profile: Jia-Shu-Yang # your ResearchGate profile
 rss_icon: true # comment this line to hide the RSS icon
