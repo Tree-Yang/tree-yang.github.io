@@ -65,16 +65,16 @@ When modifying `_config.yml`, these **must be updated together**:
 
 ### Content Types → Directories
 
-| Content | Directory | Frontmatter Key |
-|---------|-----------|-----------------|
-| Blog posts | `_posts/` | `layout: post`, filename: `YYYY-MM-DD-title.md` |
-| News/announcements | `_news/` | `layout: post` |
-| Projects | `_projects/` | `layout: page`, `importance: N` |
-| Publications | `_bibliography/papers.bib` | BibTeX entries |
-| Books | `_books/` | `layout: book-review` |
-| Teaching | `_teachings/` | `layout: page` |
-| Static pages | `_pages/` | `layout: page`, `permalink: /path/` |
-| CV | `_data/cv.yml` | RenderCV format (auto-generates PDF via CI) |
+| Content            | Directory                  | Frontmatter Key                                 |
+| ------------------ | -------------------------- | ----------------------------------------------- |
+| Blog posts         | `_posts/`                  | `layout: post`, filename: `YYYY-MM-DD-title.md` |
+| News/announcements | `_news/`                   | `layout: post`                                  |
+| Projects           | `_projects/`               | `layout: page`, `importance: N`                 |
+| Publications       | `_bibliography/papers.bib` | BibTeX entries                                  |
+| Books              | `_books/`                  | `layout: book-review`                           |
+| Teaching           | `_teachings/`              | `layout: page`                                  |
+| Static pages       | `_pages/`                  | `layout: page`, `permalink: /path/`             |
+| CV                 | `_data/cv.yml`             | RenderCV format (auto-generates PDF via CI)     |
 
 ### Templates & Rendering
 
@@ -97,13 +97,13 @@ When modifying `_config.yml`, these **must be updated together**:
 
 Detailed instructions for each file type live in `.github/instructions/`:
 
-| File Type | Instruction File |
-|-----------|-----------------|
-| Markdown content (posts, pages, projects, etc.) | `.github/instructions/markdown-content.instructions.md` |
-| YAML config (`_config.yml`, `_data/`) | `.github/instructions/yaml-configuration.instructions.md` |
-| BibTeX (`_bibliography/papers.bib`) | `.github/instructions/bibtex-bibliography.instructions.md` |
-| Liquid templates (`_includes/`, `_layouts/`) | `.github/instructions/liquid-templates.instructions.md` |
-| JavaScript (`_scripts/`) | `.github/instructions/javascript-scripts.instructions.md` |
+| File Type                                       | Instruction File                                           |
+| ----------------------------------------------- | ---------------------------------------------------------- |
+| Markdown content (posts, pages, projects, etc.) | `.github/instructions/markdown-content.instructions.md`    |
+| YAML config (`_config.yml`, `_data/`)           | `.github/instructions/yaml-configuration.instructions.md`  |
+| BibTeX (`_bibliography/papers.bib`)             | `.github/instructions/bibtex-bibliography.instructions.md` |
+| Liquid templates (`_includes/`, `_layouts/`)    | `.github/instructions/liquid-templates.instructions.md`    |
+| JavaScript (`_scripts/`)                        | `.github/instructions/javascript-scripts.instructions.md`  |
 
 ## Development Workflow
 
@@ -113,6 +113,7 @@ Detailed instructions for each file type live in `.github/instructions/`:
 ## CI/CD Pipeline
 
 GitHub Actions (`.github/workflows/`):
+
 - **deploy.yml** — Builds with Jekyll, runs purgecss, deploys to `gh-pages`
 - **prettier.yml** — Formatting check (fails PRs if not formatted)
 - **broken-links.yml / broken-links-site.yml** — Link validation
