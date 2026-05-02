@@ -2,14 +2,14 @@
 layout: about
 title: 关于
 permalink: /zh/
-subtitle: 同济大学，土木工程学院，博士后研究员
+subtitle: 西安建筑科技大学，土木工程学院，师资博士后
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>上海，中国</p>
+    <p>陕西省西安市雁塔路13号，710055</p>
 
 selected_papers: false
 social: true
@@ -27,7 +27,7 @@ latest_posts:
 
 **杨家树**
 
-同济大学博士后研究员，合作导师陈建兵教授。2023 年获同济大学博士学位，2016 年获湖南大学学士学位。
+西安建筑科技大学土木工程学院师资博士后。2023 年获同济大学博士学位，导师陈建兵教授。2021 年 7 月至 2022 年 7 月在莱布尼兹汉诺威大学联合培养（CSC 资助），外方导师 Michael Beer 教授。2016 年获哈尔滨工业大学学士学位。
 
 我的研究致力于回答一个核心问题：**如何在随机激励下设计既高效又可靠的结构？**
 

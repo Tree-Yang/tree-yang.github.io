@@ -2,41 +2,41 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Researcher, College of Civil Engineering, Tongji University
+subtitle: Faculty-oriented Postdoctoral Fellow, School of Civil Engineering, Xi'an University of Architecture and Technology
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>Shanghai, China</p>
+    <p>13 Yanta Road, Xi'an, Shaanxi 710055, China</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-**Jiashu Yang** (杨家树)
+**Jia-Shu Yang** (杨家树)
 
-Postdoctoral Researcher at Tongji University, advised by Prof. Jianbing Chen. Previously received Ph.D. from Tongji University (2023) and B.S. from Hunan University (2016).
+Faculty-oriented Postdoctoral Fellow at Xi'an University of Architecture and Technology. Ph.D. from Tongji University (2023), advised by Prof. Jian-Bing Chen. Visiting scholar at Leibniz Universit&auml;t Hannover (2021&ndash;2022), co-advised by Prof. Michael Beer.
 
 My research addresses a fundamental question: **How to design structures that are both efficient and reliable under stochastic excitations?**
 
 **Methodological framework:**
 
-- **Probability Density Evolution Method (PDEM)** — Efficient evaluation of structural response and reliability under random excitations
-- **Reliability-Based Design Optimization (RBDO)** — Integrating reliability constraints into structural optimization
-- **Dynamic Reliability Analysis** — First-passage probability evaluation for nonlinear structures
-- **Topology Optimization** — Layout design of braced frames and structures under seismic excitations
+- **Probability Density Evolution Method (PDEM)** &mdash; Efficient evaluation of structural response and reliability under random excitations
+- **Reliability-Based Design Optimization (RBDO)** &mdash; Integrating reliability constraints into structural optimization
+- **Dynamic Reliability Analysis** &mdash; First-passage probability evaluation for nonlinear structures
+- **Topology Optimization** &mdash; Layout design of braced frames and structures under seismic excitations
 
 **Current research directions:**
 

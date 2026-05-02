@@ -23,6 +23,10 @@ Efficient evaluation of first-passage probabilities for nonlinear structures und
 
 Development of dimension-reduced PDEE formulations and decoupled multi-probability density evolution methods. These approaches reduce computational cost for high-dimensional systems while maintaining accuracy in reliability evaluation and stochastic model updating.
 
-## Stochastic Modeling & Information Reuse
+## Structural Optimization
 
-Strategies for efficient information reuse when probability distributions shift significantly during optimization or model updating. Augmented change of probability measure techniques enable accelerated convergence in stochastic model updating and reliability-based design optimization.
+Parameter and topology optimization under dynamic reliability constraints using PDEM-based sensitivity analysis and globally convergent methods of moving asymptotes (GCMMA).
+
+## Computational Stochastic Dynamics
+
+Stochastic ground motion modeling, GF-discrepancy-based point selection for high-dimensional random variables, and efficient reliability evaluation for structures subject to random excitations.
