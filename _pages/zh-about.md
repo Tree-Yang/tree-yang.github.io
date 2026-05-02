@@ -4,13 +4,6 @@ title: 关于
 permalink: /zh/
 subtitle: 西安建筑科技大学，土木工程学院，师资博士后
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false
-  more_info: >
-    <p>陕西省西安市雁塔路13号，710055</p>
-
 selected_papers: false
 social: true
 
@@ -46,4 +39,4 @@ latest_posts:
 
 ---
 
-[Publications](/publications/) &middot; [Projects](/projects/) &middot; [CV](/cv/)
+[Research](/research/) &middot; [Projects](/projects/) &middot; [Publications](/publications/) &middot; [CV](/cv/)

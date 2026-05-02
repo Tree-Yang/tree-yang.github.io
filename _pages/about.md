@@ -1,15 +1,8 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: Faculty-oriented Postdoctoral Fellow, School of Civil Engineering, Xi'an University of Architecture and Technology
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false
-  more_info: >
-    <p>13 Yanta Road, Xi'an, Shaanxi 710055, China</p>
 
 selected_papers: false
 social: true
@@ -46,4 +39,4 @@ My research addresses a fundamental question: **How to design structures that ar
 
 ---
 
-[Publications](/publications/) &middot; [Projects](/projects/) &middot; [CV](/cv/)
+[Research](/research/) &middot; [Projects](/projects/) &middot; [Publications](/publications/) &middot; [CV](/cv/)
