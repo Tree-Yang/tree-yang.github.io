@@ -49,6 +49,14 @@
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+    {% if entry.keywords %}
+      <div class="publication-tags" aria-label="Publication topics">
+        {% assign publication_tags = entry.keywords | split: ',' %}
+        {% for tag in publication_tags %}
+          <span>{{ tag | strip }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
