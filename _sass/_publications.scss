@@ -71,21 +71,61 @@
         font-weight: bolder;
       }
 
+      .chinese-title {
+        color: var(--global-text-color-light);
+        font-size: 0.92rem;
+        margin-top: 0.15rem;
+      }
+
       .publication-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.3rem;
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
+        gap: 0.4rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0.35rem;
 
-        span {
-          color: var(--global-theme-color);
-          background: var(--global-code-bg-color);
-          border: 1px solid var(--global-theme-color);
-          border-radius: 0.2rem;
+        .publication-tag {
+          border-radius: 999px;
           font-size: 0.72rem;
+          font-weight: 500;
           line-height: 1.2;
-          padding: 0.12rem 0.42rem;
+          padding: 0.14rem 0.5rem;
+        }
+
+        .publication-tag-topology-optimization {
+          color: #7a3f00;
+          background: #fff2df;
+          border: 1px solid #d9902f;
+        }
+
+        .publication-tag-reliability-based-topology-optimization {
+          color: #7a1f43;
+          background: #ffe8f0;
+          border: 1px solid #d56a93;
+        }
+
+        .publication-tag-design-optimization {
+          color: #13512f;
+          background: #e7f6ee;
+          border: 1px solid #57a979;
+        }
+
+        .publication-tag-reliability-based-design-optimization {
+          color: #174a7c;
+          background: #e6f0fb;
+          border: 1px solid #5b93c9;
+        }
+
+        .publication-tag-uncertainty-quantification {
+          color: #4b3c7a;
+          background: #eeeafb;
+          border: 1px solid #8e7cc3;
+        }
+
+        .publication-tag-earthquake-engineering {
+          color: #7a2f21;
+          background: #fdece8;
+          border: 1px solid #d07767;
         }
       }
 

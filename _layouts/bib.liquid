@@ -49,11 +49,15 @@
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+    {% if entry.chinese_title %}
+      <div class="chinese-title">{{ entry.chinese_title }}</div>
+    {% endif %}
     {% if entry.keywords %}
       <div class="publication-tags" aria-label="Publication topics">
         {% assign publication_tags = entry.keywords | split: ',' %}
         {% for tag in publication_tags %}
-          <span>{{ tag | strip }}</span>
+          {% assign clean_tag = tag | strip %}
+          <span class="publication-tag publication-tag-{{ clean_tag | slugify }}">{{ clean_tag }}</span>
         {% endfor %}
       </div>
     {% endif %}
@@ -175,6 +179,18 @@
     {% assign entryyear = '' %}
     {% if entry.year %}
       {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
+    {% endif %}
+    {% if entry.volume %}
+      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.volume }}{% endcapture %}
+    {% endif %}
+    {% if entry.number %}
+      {% capture entrytype %}{{ entrytype }}{{ "(" }}{{ entry.number }}{{ ")" }}{% endcapture %}
+    {% endif %}
+    {% if entry.pages %}
+      {% capture entrytype %}{{ entrytype }}{{ ": " }}{{ entry.pages }}{% endcapture %}
+    {% endif %}
+    {% if entry.language == 'Chinese' %}
+      {% capture entrytype %}{{ entrytype }}{{ " (in Chinese)" }}{% endcapture %}
     {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
