@@ -24,13 +24,14 @@
   }
 
   h2.bibliography {
-    color: #244f7a;
-    border-top: 2px solid rgba(31, 95, 159, 0.38);
+    color: #244f7a !important;
+    border-top: 3px solid rgba(31, 95, 159, 0.46);
     padding-top: 1.15rem;
     margin-top: 2.25rem;
     text-align: right;
 
     span {
+      color: #244f7a !important;
       font-weight: 600;
       letter-spacing: 0;
     }
@@ -46,13 +47,11 @@
       margin-bottom: 1.25rem;
       padding-bottom: 1.05rem;
 
-      &:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: min(46%, 24rem);
-        border-bottom: 1px solid rgba(31, 95, 159, 0.14);
+      &:not(:last-child) {
+        background-image: linear-gradient(to right, rgba(31, 95, 159, 0.2), rgba(31, 95, 159, 0.2));
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: min(48%, 26rem) 1px;
       }
 
       .preview {
@@ -254,6 +253,22 @@
       border-color: var(--global-highlight-color);
     }
   }
+}
+
+h2.bibliography {
+  color: #244f7a !important;
+  border-top: 3px solid rgba(31, 95, 159, 0.46);
+
+  span {
+    color: #244f7a !important;
+  }
+}
+
+ol.bibliography > li:not(:last-child) {
+  background-image: linear-gradient(to right, rgba(31, 95, 159, 0.2), rgba(31, 95, 159, 0.2));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: min(48%, 26rem) 1px;
 }
 
 .citation,
