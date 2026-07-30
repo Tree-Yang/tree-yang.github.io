@@ -16,12 +16,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
+        },{id: "nav-研究方向",
+          title: "研究方向",
+          description: "研究方向概述",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/research/";
+          },
         },{id: "nav-publications",
           title: "Publications",
           description: "Journal articles, conference papers, and presentations",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
+          },
+        },{id: "nav-学术成果",
+          title: "学术成果",
+          description: "期刊论文、会议论文与报告",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/publications/";
           },
         },{id: "nav-projects",
           title: "Projects",
@@ -30,12 +44,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-开源程序",
+          title: "开源程序",
+          description: "研究相关软件与工具",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/projects/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "Curriculum Vitae",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
+          },
+        },{id: "nav-简历",
+          title: "简历",
+          description: "个人简历",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/cv/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
