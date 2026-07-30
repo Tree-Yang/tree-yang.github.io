@@ -109,12 +109,18 @@ cv:
     Academic Service:
       - bullet: 中国工程建设标准化协会城市生命线工程安全专业委员会委员（2023 年 – ）
       - bullet: 国际结构和多学科优化学会（ISSMO）会员
-      - bullet: >-
-          国际期刊审稿人：*Structural and Multidisciplinary Optimization*、*Computer
-          Methods in Applied Mechanics and Engineering*、*Reliability Engineering &
-          System Safety*、*Mechanical Systems and Signal Processing*、*Engineering
-          Structures*、*Probabilistic Engineering Mechanics*、*Chinese Journal of
-          Aeronautics*、*ASCE-ASME Journal of Risk and Uncertainty in Engineering
-          Systems, Part A: Civil Engineering*、*Journal of Building Engineering*、
-          *Results in Engineering* 等
-      - bullet: 中文核心期刊审稿人：《世界地震工程》等
+      - bullet: 国际期刊审稿人：
+        subitems:
+          - "*Structural and Multidisciplinary Optimization*"
+          - "*Computer Methods in Applied Mechanics and Engineering*"
+          - "*Reliability Engineering & System Safety*"
+          - "*Mechanical Systems and Signal Processing*"
+          - "*Engineering Structures*"
+          - "*Probabilistic Engineering Mechanics*"
+          - "*Chinese Journal of Aeronautics*"
+          - "*ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering*"
+          - "*Journal of Building Engineering*"
+          - "*Results in Engineering*"
+      - bullet: 中文核心期刊审稿人：
+        subitems:
+          - 《世界地震工程》

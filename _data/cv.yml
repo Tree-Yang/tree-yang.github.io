@@ -92,12 +92,18 @@ cv:
     Academic Service:
       - bullet: "Member of Specialized Committee on Safety of Urban Lifeline Engineering, China Association for Engineering Construction Standardization (CECS), 2023 –"
       - bullet: Member of International Society for Structural and Multidisciplinary Optimization (ISSMO)
-      - bullet: >-
-          Reviewer of international journals including *Structural and Multidisciplinary
-          Optimization*, *Computer Methods in Applied Mechanics and Engineering*,
-          *Reliability Engineering & System Safety*, *Mechanical Systems and Signal
-          Processing*, *Engineering Structures*, *Probabilistic Engineering Mechanics*,
-          *Chinese Journal of Aeronautics*, *ASCE-ASME Journal of Risk and Uncertainty in
-          Engineering Systems, Part A: Civil Engineering*, *Journal of Building
-          Engineering*, and *Results in Engineering*
-      - bullet: Reviewer of Chinese journals including *World Earthquake Engineering*
+      - bullet: "Reviewer of international journals:"
+        subitems:
+          - "*Structural and Multidisciplinary Optimization*"
+          - "*Computer Methods in Applied Mechanics and Engineering*"
+          - "*Reliability Engineering & System Safety*"
+          - "*Mechanical Systems and Signal Processing*"
+          - "*Engineering Structures*"
+          - "*Probabilistic Engineering Mechanics*"
+          - "*Chinese Journal of Aeronautics*"
+          - "*ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering*"
+          - "*Journal of Building Engineering*"
+          - "*Results in Engineering*"
+      - bullet: "Reviewer of Chinese journals:"
+        subitems:
+          - "*World Earthquake Engineering* (世界地震工程)"

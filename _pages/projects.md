@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
-description: Research-related software and tools
+title: Code
+permalink: /code/
+description: Open-source research software and tools
 nav: true
 nav_order: 4
 ---
@@ -21,7 +21,7 @@ Open-source toolboxes and code implementations developed as part of my research.
   </div>
   <div class="project-card">
     <div class="project-lang">MATLAB</div>
-    <h3>Process-Oriented PDEM</h3>
+    <h3>PDEM Toolbox</h3>
     <p>Toolbox for the probability density evolution method (PDEM), covering stochastic response analysis and first-passage reliability evaluation.</p>
     <div class="project-links">
       <a href="https://github.com/Tree-Yang/Process_Oriented_PDEM"><i class="fa-brands fa-github"></i>Repository</a>

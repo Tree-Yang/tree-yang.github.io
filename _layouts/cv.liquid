@@ -208,7 +208,16 @@ layout: default
                   <ul class="card-text font-weight-light cv-bullets">
                     {% for entry in section_entries %}
                       {% if entry.bullet %}
-                        <li>{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                        <li>
+                          {{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}
+                          {% if entry.subitems %}
+                            <ul class="cv-subitems">
+                              {% for sub in entry.subitems %}
+                                <li>{{ sub | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </li>
                       {% endif %}
                     {% endfor %}
                   </ul>

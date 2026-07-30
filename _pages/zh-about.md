@@ -79,7 +79,7 @@ latest_posts:
 
 <div class="quick-links">
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/research/">研究方向</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="/zh/projects/">开源程序</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/zh/code/">开源程序</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/publications/">学术成果</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/cv/">简历</a>
 </div>

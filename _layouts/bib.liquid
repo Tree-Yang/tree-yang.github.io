@@ -167,13 +167,13 @@
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
       {% if entry.chinese_journal %}
-        {% capture entrytype %}<em>{{ entry.chinese_journal }}</em> / {{ entry.journal }}{% endcapture %}
+        {% capture entrytype %}<em>{{ entry.chinese_journal }} / {{ entry.journal }}</em>{% endcapture %}
       {% else %}
         {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
       {% endif %}
     {% elsif proceedings contains entry.type %}
       {% if entry.chinese_booktitle %}
-        {% capture entrytype %}<em>{{ entry.chinese_booktitle }}</em> / {{ entry.booktitle }}{% endcapture %}
+        {% capture entrytype %}<em>{{ entry.chinese_booktitle }} / {{ entry.booktitle }}</em>{% endcapture %}
       {% else %}
         {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
       {% endif %}

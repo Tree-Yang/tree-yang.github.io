@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 开源程序
-permalink: /zh/projects/
+permalink: /zh/code/
 description: 研究相关软件与工具
 nav: true
 nav_order: 4
@@ -21,7 +21,7 @@ nav_order: 4
   </div>
   <div class="project-card">
     <div class="project-lang">MATLAB</div>
-    <h3>过程导向 PDEM 工具箱</h3>
+    <h3>PDEM 工具箱</h3>
     <p>概率密度演化方法（PDEM）工具箱，涵盖随机响应分析与首次超越可靠度评估。</p>
     <div class="project-links">
       <a href="https://github.com/Tree-Yang/Process_Oriented_PDEM"><i class="fa-brands fa-github"></i>代码仓库</a>
@@ -29,7 +29,7 @@ nav_order: 4
   </div>
   <div class="project-card">
     <div class="project-lang">MATLAB</div>
-    <h3>GF 偏差点集选取</h3>
+    <h3>GF-偏差代表点选取</h3>
     <p>基于广义 F 偏差（GF-discrepancy）的点集选取策略，用于随机动力学中高维随机变量的代表性点集表达。</p>
     <div class="project-links">
       <a href="https://github.com/Tree-Yang/GF-discrepancy-based-point-selection"><i class="fa-brands fa-github"></i>代码仓库</a>

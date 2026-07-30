@@ -329,6 +329,22 @@ ul.task-list input[type="checkbox"] {
         color: var(--global-theme-color);
       }
     }
+
+    .cv-subitems {
+      list-style: circle;
+      margin: 0.4rem 0 0.15rem;
+      padding-left: 1.3rem;
+
+      li {
+        color: var(--global-text-color-light);
+        font-size: 0.92rem;
+        margin-bottom: 0.2rem;
+
+        &::marker {
+          color: color-mix(in srgb, var(--global-theme-color) 60%, transparent);
+        }
+      }
+    }
   }
 
   .cv-labeled-entry {
@@ -412,23 +428,23 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
 
     a {
       img {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-bottom: 1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-bottom: 0.5rem;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 1.75rem;
+        height: 2rem;
+        margin-bottom: 0.25rem;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 1.75rem;
+          height: 1.75rem;
         }
       }
 
