@@ -1,0 +1,120 @@
+labels:
+  Contact Information: 联系方式
+  Professional Summary: 个人简介
+  Experience: 工作经历
+  Education: 教育背景
+  Research Interests: 研究方向
+  Grants: 科研项目
+  Honors and Awards: 奖励荣誉
+  Academic Service: 学术兼职
+  Name: 姓名
+  Professional Title: 职位
+  Email: 邮箱
+  Phone: 电话
+  Location: 地址
+  Website: 主页
+  Present: 至今
+
+cv:
+  name: 杨家树 (Jia-Shu Yang)
+  label: 师资博士后，工学博士
+  email: yang_jiashu@outlook.com
+  website: https://tree-yang.github.io
+  summary: >-
+    主要从事结构优化、计算随机动力学与基于可靠度的设计优化研究，
+    聚焦基于概率密度演化方法的工程结构抗震可靠性分析与优化设计。
+  sections:
+    Experience:
+      - company: 西安建筑科技大学
+        position: 师资博士后
+        location: 西安
+        start_date: "2023-07"
+        highlights:
+          - 土木工程学院
+
+    Education:
+      - institution: 同济大学
+        area: 土木工程学院建筑工程系
+        studyType: 工学博士（直博）
+        start_date: "2016-09"
+        end_date: "2023-02"
+        location: 上海
+        highlights:
+          - 推荐免试直接攻读博士学位，导师为国家杰出青年基金获得者陈建兵教授
+          - 博士论文：基于概率密度演化方法的结构抗震可靠性优化设计
+      - institution: 莱布尼兹汉诺威大学
+        area: 风险与可靠性研究所
+        studyType: 联合培养博士生
+        start_date: "2021-07"
+        end_date: "2022-07"
+        location: 德国汉诺威
+        highlights:
+          - 国家留学基金委（CSC）资助，外方导师为欧洲安全与可靠性协会主席 Michael Beer 教授
+      - institution: 哈尔滨工业大学
+        area: 土木工程学院
+        studyType: 工学学士
+        start_date: "2012-09"
+        end_date: "2016-06"
+        location: 哈尔滨
+
+    Research Interests:
+      - bullet: 结构参数优化和拓扑优化
+      - bullet: 结构随机动力学和动力可靠性分析
+      - bullet: 基于动力可靠性的结构参数优化和拓扑优化
+      - bullet: 结构抗震可靠性分析
+
+    Grants:
+      - label: 国家自然科学基金青年基金项目（C 类），52408212，基于抗震可靠性的高层建筑伸臂桁架智能优化布置方法研究
+        details: 主持，2025.01 – 2027.12
+      - label: 陕西省博士后科研项目特别资助，2023BSHTBZZ39，考虑时空域随机性的结构抗震可靠性拓扑优化
+        details: 主持，2024.01 – 2026.07
+      - label: 西安建筑科技大学引进人才科研启动项目，1608724027，随机地震动激励下钢筋混凝土框架结构拓扑优化设计方法
+        details: 主持，2023.07 – 2026.07
+
+    Honors and Awards:
+      - title: Earthquake Engineering & Structural Dynamics 高被引（top cited）与高浏览量（top viewed）论文
+        date: "2025"
+        awarder: Wiley
+      - title: 中国知网《学术精要数据库》高影响力论文
+        date: "2023"
+        awarder: CNKI
+      - title: 国家建设高水平大学公派研究生项目资助（12 个月）
+        date: "2021"
+        awarder: 国家留学基金管理委员会
+      - title: 黄金枝奖学金一等奖
+        date: "2020"
+        awarder: 同济大学
+      - title: 最佳学生报告奖
+        date: "2020"
+        awarder: 第 16 届沪港力学论坛
+      - title: 学生奖学金
+        date: "2020"
+        awarder: 第七届国际可靠性工程与风险管理研讨会（ISRERM7）
+      - title: 优秀博士新生奖学金
+        date: "2016"
+        awarder: 同济大学
+      - title: 厦门万荣绿建集团奖学金
+        date: "2015"
+        awarder: 哈尔滨工业大学
+      - title: 菁华力学专项奖学金
+        date: "2014"
+        awarder: 哈尔滨工业大学
+      - title: 三好学生
+        date: "2013"
+        awarder: 哈尔滨工业大学
+      - title: 国家奖学金
+        date: "2013"
+        awarder: 教育部
+
+    Academic Service:
+      - bullet: 中国工程建设标准化协会城市生命线工程安全专业委员会委员（2023 年 – ）
+      - bullet: 国际结构和多学科优化学会（ISSMO）会员
+      - bullet: >-
+          国际期刊审稿人：*Structural and Multidisciplinary Optimization*、*Computer
+          Methods in Applied Mechanics and Engineering*、*Reliability Engineering &
+          System Safety*、*Mechanical Systems and Signal Processing*、*Engineering
+          Structures*、*Probabilistic Engineering Mechanics*、*Chinese Journal of
+          Aeronautics*、*ASCE-ASME Journal of Risk and Uncertainty in Engineering
+          Systems, Part A: Civil Engineering*、*Journal of Building Engineering*、
+          *Results in Engineering* 等
+      - bullet: 中文核心期刊审稿人：《世界地震工程》等

@@ -222,6 +222,41 @@ ul.task-list input[type="checkbox"] {
       }
     }
   }
+
+  .cv-bullets {
+    list-style: disc;
+    margin: 0.25rem 0 0.25rem 0.25rem;
+    padding-left: 1.4rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.55;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::marker {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .cv-labeled-entry {
+    border-left: 3px solid color-mix(in srgb, var(--global-theme-color) 40%, transparent);
+    margin-bottom: 0.75rem;
+    padding-left: 0.85rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-entry-details {
+      color: var(--global-text-color-light);
+      font-size: 0.92rem;
+      margin-top: 0.15rem;
+    }
+  }
 }
 
 .table-cv-map {

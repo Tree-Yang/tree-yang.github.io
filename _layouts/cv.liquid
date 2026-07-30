@@ -39,6 +39,12 @@ layout: default
 
   <article>
     <div class="cv">
+      {% comment %} Data source: page.cv_data selects the data file (default: cv, e.g. cv_zh for the Chinese CV) {% endcomment %}
+      {% assign cv_source = page.cv_data | default: 'cv' %}
+      {% assign cv_file = site.data[cv_source] %}
+      {% assign cv_labels = cv_file.labels %}
+      {% assign cv_present_label = cv_labels.Present | default: 'Present' %}
+
       {% comment %} Determine which CV format to render {% endcomment %}
       {% assign render_rendercv = false %}
       {% assign render_jsonresume = false %}
@@ -49,49 +55,59 @@ layout: default
         {% assign render_jsonresume = true %}
       {% else %}
         {% comment %} Legacy behavior: RenderCV takes priority if both exist {% endcomment %}
-        {% if site.data.cv and site.data.cv.cv %}
+        {% if cv_file and cv_file.cv %}
           {% assign render_rendercv = true %}
         {% elsif site.data.resume %}
           {% assign render_jsonresume = true %}
         {% endif %}
       {% endif %}
 
-      {% if render_rendercv and site.data.cv and site.data.cv.cv %}
+      {% if render_rendercv and cv_file and cv_file.cv %}
         {% comment %} RenderCV format {% endcomment %}
-        {% assign cv = site.data.cv.cv %}
+        {% assign cv = cv_file.cv %}
 
         <!-- Header/Contact Information -->
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Contact Information</h3>
+            <h3 class="card-title font-weight-medium">{{ cv_labels['Contact Information'] | default: 'Contact Information' }}</h3>
             <table class="table table-cv table-sm table-borderless">
               {% if cv.name %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Name</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels.Name | default: 'Name' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
                 </tr>
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels['Professional Title'] | default: 'Professional Title' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
                 </tr>
               {% endif %}
               {% if cv.email %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Email</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels.Email | default: 'Email' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
                 </tr>
               {% endif %}
               {% if cv.phone %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Phone</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels.Phone | default: 'Phone' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.phone }}</td>
                 </tr>
               {% endif %}
               {% if cv.address %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels.Location | default: 'Location' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     {% if cv.address.street %}{{ cv.address.street }}, {% endif %}
                     {% if cv.address.city %}{{ cv.address.city }}, {% endif %}
@@ -102,7 +118,9 @@ layout: default
               {% endif %}
               {% if cv.website %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Website</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ cv_labels.Website | default: 'Website' }}</b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">
                     <a href="{{ cv.website }}" target="_blank">{{ cv.website }}</a>
                   </td>
@@ -115,7 +133,7 @@ layout: default
         <!-- Summary -->
         {% if cv.summary %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
+            <h3 class="card-title font-weight-medium">{{ cv_labels['Professional Summary'] | default: 'Professional Summary' }}</h3>
             <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}
@@ -129,7 +147,7 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium">{{ cv_labels.Experience | default: 'Experience' }}</h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}
@@ -149,7 +167,7 @@ layout: default
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+            <h3 class="card-title font-weight-medium">{{ cv_labels[section_title] | default: section_title }}</h3>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -180,14 +198,26 @@ layout: default
                 {% include cv/references.liquid %}
               {% else %}
                 <!-- Generic section -->
+                {% assign has_bullets = false %}
                 {% for entry in section_entries %}
                   {% if entry.bullet %}
-                    <ul class="card-text font-weight-light list-group list-group-flush">
-                      <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-                    </ul>
-                  {% elsif entry.label %}
-                    <div class="card-text font-weight-light">
-                      <strong>{{ entry.label }}:</strong> {{ entry.details }}
+                    {% assign has_bullets = true %}
+                  {% endif %}
+                {% endfor %}
+                {% if has_bullets %}
+                  <ul class="card-text font-weight-light cv-bullets">
+                    {% for entry in section_entries %}
+                      {% if entry.bullet %}
+                        <li>{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {% for entry in section_entries %}
+                  {% if entry.label %}
+                    <div class="card-text font-weight-light cv-labeled-entry">
+                      <strong>{{ entry.label }}</strong>
+                      <div class="cv-entry-details">{{ entry.details }}</div>
                     </div>
                   {% endif %}
                 {% endfor %}
