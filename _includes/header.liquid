@@ -2,24 +2,35 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      {% if page.url contains '/zh/' %}
+        {% assign is_zh = true %}
+      {% else %}
+        {% assign is_zh = false %}
+      {% endif %}
       {% if page.permalink != '/' and page.permalink != '/zh/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
+        {% if is_zh %}
+          <a class="navbar-brand title font-weight-lighter" href="{{ '/zh/' | relative_url }}">
+            <span class="font-weight-bold">杨家树</span>
+          </a>
+        {% else %}
+          <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+            {% if site.title == 'blank' %}
+              {% if site.first_name %}
+                <span class="font-weight-bold">
+                  {{- site.first_name -}}
+                </span>
+              {% endif %}
+              {% if site.middle_name %}
+                {{- site.middle_name -}}
+              {% endif %}
+              {% if site.last_name %}
+                {{- site.last_name -}}
+              {% endif %}
+            {% else %}
+              {{- site.title -}}
             {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
-            {% endif %}
-          {% else %}
-            {{- site.title -}}
-          {% endif %}
-        </a>
+          </a>
+        {% endif %}
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% social_links %}</div>
@@ -42,12 +53,6 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% if page.url contains '/zh/' %}
-            {% assign is_zh = true %}
-          {% else %}
-            {% assign is_zh = false %}
-          {% endif %}
-
           <!-- About -->
           <li class="nav-item {% if is_zh and page.permalink == '/zh/' %}active{% elsif is_zh == false and page.permalink == '/' %}active{% endif %}">
             {% if is_zh %}
@@ -67,12 +72,21 @@
             {% endif %}
           </li>
 
-          <!-- Other pages (always English, skip /zh/ pages) -->
+          <!-- Other pages (match the language of the current page) -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% assign skip_page = false %}
-            {% if p.url contains '/zh/' %}
-              {% assign skip_page = true %}
+            {% if is_zh %}
+              {% unless p.url contains '/zh/' %}
+                {% assign skip_page = true %}
+              {% endunless %}
+              {% if p.permalink == '/zh/' %}
+                {% assign skip_page = true %}
+              {% endif %}
+            {% else %}
+              {% if p.url contains '/zh/' %}
+                {% assign skip_page = true %}
+              {% endif %}
             {% endif %}
             {% if p.nav and p.autogen == null and skip_page == false %}
               {% if p.dropdown %}
@@ -150,12 +164,25 @@
               </button>
             </li>
           {% endif %}
-          <!-- Language toggle (only switches about page) -->
+          <!-- Language toggle (maps to the counterpart of the current page) -->
           <li class="nav-item">
             {% if is_zh %}
-              <a class="nav-link" href="/" title="Switch to English">EN</a>
+              {% assign counterpart_url = page.url | remove_first: '/zh' %}
+              {% if counterpart_url == '' %}
+                {% assign counterpart_url = '/' %}
+              {% endif %}
+              {% assign counterpart = site.pages | where: 'url', counterpart_url | first %}
+              {% unless counterpart %}
+                {% assign counterpart_url = '/' %}
+              {% endunless %}
+              <a class="nav-link" href="{{ counterpart_url | relative_url }}" title="Switch to English">EN</a>
             {% else %}
-              <a class="nav-link" href="{{ '/zh/' | relative_url }}" title="切换到中文">中</a>
+              {% assign counterpart_url = '/zh' | append: page.url %}
+              {% assign counterpart = site.pages | where: 'url', counterpart_url | first %}
+              {% unless counterpart %}
+                {% assign counterpart_url = '/zh/' %}
+              {% endunless %}
+              <a class="nav-link" href="{{ counterpart_url | relative_url }}" title="切换到中文">中</a>
             {% endif %}
           </li>
         </ul>

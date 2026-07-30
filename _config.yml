@@ -190,6 +190,11 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
+  - plan.md
+  - resume-zh_CN.tex
+  - resume-zh_EN.tex
+  - "中文简历.pdf"
+  - "英文简历.pdf"
   - _pages/about_einstein.md
   - _pages/blog.md
   - _pages/books.md

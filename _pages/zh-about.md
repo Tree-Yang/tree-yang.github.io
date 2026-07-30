@@ -81,8 +81,8 @@ latest_posts:
 ---
 
 <div class="about-links">
-  <a class="btn btn-sm z-depth-0" role="button" href="/research/">研究方向</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="/projects/">开源程序</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="/publications/">学术成果</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="/cv/">简历</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/zh/research/">研究方向</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/zh/projects/">开源程序</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/zh/publications/">学术成果</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/zh/cv/">简历</a>
 </div>
