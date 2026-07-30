@@ -13,7 +13,7 @@ nav_order: 3
 
 {% include bib_search.liquid %}
 
-<div class="quick-links">
+<div class="quick-links section-nav">
   <a class="btn btn-sm z-depth-0" role="button" href="#journal-articles">Journal Articles</a>
   <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">Conference Papers & Presentations</a>
 </div>

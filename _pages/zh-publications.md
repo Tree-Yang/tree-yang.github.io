@@ -13,7 +13,7 @@ nav_order: 3
 
 {% include bib_search.liquid %}
 
-<div class="quick-links">
+<div class="quick-links section-nav">
   <a class="btn btn-sm z-depth-0" role="button" href="#journal-articles">期刊论文</a>
   <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">会议论文与报告</a>
 </div>
