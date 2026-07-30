@@ -52,6 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const updateInputField = () => {
     const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
+    // A hash that matches an element id is a section anchor, not a search term: let the browser scroll to it
+    if (hashValue && document.getElementById(hashValue)) {
+      const searchField = document.getElementById("bibsearch");
+      if (searchField.value) {
+        searchField.value = "";
+        filterItems("");
+      }
+      return;
+    }
     document.getElementById("bibsearch").value = hashValue;
     filterItems(hashValue);
   };
