@@ -145,3 +145,84 @@ For troubleshooting, see:
 - **Docker image:** `amirpourmand/al-folio:v0.16.3`
 - **Key plugins:** jekyll-scholar, jekyll-archives-v2, jekyll-paginate-v2, jekyll-minifier, jekyll-terser, classifier-reborn
 - **Node.js:** Prettier v3.8+ with `@shopify/prettier-plugin-liquid`, purgecss
+
+---
+
+# This Site: Design System & Customizations
+
+This section documents the customizations layered on top of stock al-folio for **Jia-Shu Yang's** personal site (`https://tree-yang.github.io`). Read this before editing so changes stay consistent. Content is authoritative from the CV PDFs / `_data`; do not invent facts.
+
+## Design Language
+
+- **Two-color accent system — nothing else.** Do not introduce new accent hues.
+  - **Indigo** = primary/brand. Light `#4f46e5` (hover `#4338ca`); dark `#818cf8` (hover `#a5b4fc`). Defined in `_sass/_variables.scss` (`$blue-color`, `$blue-color-dark`, `$indigo-color-light`, `$indigo-color-lighter`) and wired to `--global-theme-color` / `--global-hover-color` in `_sass/_themes.scss`.
+  - **Amber** = award/honor accent only. Vars `--global-award-color` / `--global-award-bg` / `--global-award-border` in both theme blocks of `_sass/_themes.scss`.
+- **Always use CSS variables, never hard-coded hex**, so light/dark modes both work. When you need a tint, use `color-mix(in srgb, var(--global-theme-color) N%, transparent)` (this is the established pattern throughout `_sass/_components.scss`).
+- **Dark mode is enabled** (`enable_darkmode: true`); the navbar shows a system/dark/light toggle automatically. Every new style must be verified in both modes.
+- **Card-based layout** is the shared visual motif: rounded corners (`0.6rem`), 1px `--global-divider-color` border, a 3px indigo top/left accent, subtle hover lift (`translateY(-2px)` + indigo-tinted shadow).
+- Keep it clean and restrained: generous spacing, muted secondary text (`--global-text-color-light`), pill-shaped buttons/badges.
+
+## Reusable Components (`_sass/_components.scss`)
+
+| Class                                                | Purpose                                                                                                                                                                                        |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.page-lead`                                         | Intro/lead paragraph at top of a page (larger, muted).                                                                                                                                         |
+| `.info-panel`                                        | Soft indigo-tinted card for a highlighted prose block (used on home). Wrap markdown with `<div class="info-panel" markdown="1"> … </div>`.                                                     |
+| `.topic-cards` / `.topic-card`                       | Responsive grid of feature cards with a `.topic-icon` (Font Awesome) + `h3` + `p`. Used for Research on the home page.                                                                         |
+| `.project-cards` / `.project-card`                   | Grid of software cards (`.project-lang` label, `.project-links` pill buttons). Used on the Code page.                                                                                          |
+| `.quick-links`                                       | Row of small pill nav buttons (home bottom links). Variant `.quick-links.section-nav` = larger buttons with a `fa-circle-down` arrow, used for in-page section jumps on the publications page. |
+| `.about-timeline`                                    | Single-column appointments/education list on the home page (was two-column; keep single).                                                                                                      |
+| `.cv-bullets` / `.cv-subitems` / `.cv-labeled-entry` | Styling for generic CV sections (see CV below).                                                                                                                                                |
+
+## Home Page (`_pages/about.md`, `_pages/zh-about.md`)
+
+- Uses the `about` layout. The big page title comes from `_config.yml` `first_name`/`last_name` (EN) or the `display_name` front-matter key (ZH shows `杨家树`). The Chinese name + role live in the `subtitle`. **Do not repeat the name in the body.**
+- **Research was merged into the home page** — there is no standalone `/research/` page. The five research directions are `.topic-cards` embedded directly in the home body, followed by `.quick-links` (Code / Publications / CV).
+- `about` layout supports `selected_papers: true` → renders `@*[selected=true]*` from `papers.bib` via `_includes/selected_papers.liquid`.
+
+## Bilingual Structure
+
+- English pages: `/`, `/publications/`, `/code/`, `/cv/`. Chinese mirrors: `/zh/`, `/zh/publications/`, `/zh/code/`, `/zh/cv/`. ZH pages are separate `_pages/zh-*.md` files.
+- **Navbar & language toggle logic lives in `_includes/header.liquid`.** `is_zh` is derived from `page.url contains '/zh/'`. Nav items are filtered by language; the brand shows `杨家树` on ZH pages. The 中/EN toggle maps to the **counterpart** page (`/foo/` ↔ `/zh/foo/`) and falls back to the language home if no counterpart exists.
+- When adding a new page, create **both** language versions and keep `permalink`s mirrored so the toggle resolves.
+- The "Code" page keeps English title `Code` (permalink `/code/`) and Chinese title `开源程序` (`/zh/code/`).
+
+## Publications & Talks (`_layouts/bib.liquid`, `_bibliography/`, `_data/venues.yml`)
+
+- `enable_publication_thumbnails: true`. Journal papers → `_bibliography/papers.bib`; conference talks → `_bibliography/talks.bib`, rendered on the same page via `{% bibliography -f talks %}`. Both group by year.
+- Supported custom BibTeX fields in use: `abbr`, `bibtex_show`, `abstract`, `selected`, `award` + `award_name`, `preview`, `code`, `location`, `language`, and the **site-specific** `chinese_title`, `chinese_journal`, `chinese_booktitle` (the last three are whitelisted in `_config.yml` `filtered_bibtex_keywords`).
+- **Chinese-language entries render Chinese-primary:** title shows `chinese_title` as the main line and English as the muted secondary line; the venue shows `中文名 / English name` wrapped together in one `<em>` (both italic). This is handled in `bib.liquid`.
+- **Chinese author names:** `_data/coauthors.yml` maps last-name → `chinese` for the four recurring authors (Chen 陈建兵, Yang 杨家树, Weng 翁丽丽, Lyu 律梦泽). For any `language: Chinese` entry, `bib.liquid` renders each mapped author as `中文名 (English)`. The site owner (Yang) is always bold + underlined (`.author > em`). Do **not** add `url` to these coauthors (it would turn every author into a link site-wide).
+- **Award badges** are amber-filled pills (`.links a.award.btn`); the expandable award detail uses the amber border.
+- Journal abbreviation badges come from `_data/venues.yml` (indigo-family colors). Topic/keyword tags are unified to a single indigo pill (`.publication-tag`) — do not reintroduce per-category colors.
+- `assets/img/publication_preview/` holds preview images named `<citekey>.png/.jpg`; add a `preview = {…}` field to a bib entry to show one. Missing preview → left column simply stays blank (expected).
+
+## Web CV (`_layouts/cv.liquid`, `_includes/cv/*.liquid`, `_data/cv*.yml`)
+
+- The CV is rendered as web cards, **not** a PDF link. `_pages/cv.md` and `_pages/zh-cv.md` set `layout: cv`, `cv_format: rendercv`.
+- **Data source is selectable** via the `cv_data` front-matter key: EN uses `_data/cv.yml` (default), ZH sets `cv_data: cv_zh` → `_data/cv_zh.yml`.
+- `cv_zh.yml` has a top-level `labels:` map that localizes card titles (Experience→工作经历, etc.) and the "Present"→"至今" badge. `cv.liquid` reads `cv_labels` and falls back to the English key.
+- Section keys are dispatched by exact name in `cv.liquid` (`Education`, `Experience`, `Honors and Awards`, `Projects`, …). Unknown sections fall through to a **generic renderer** that accepts either:
+  - `bullet:` items → indigo-bulleted list (`.cv-bullets`), optionally with `subitems:` → nested second-level list (`.cv-subitems`), used for the reviewer journal list.
+  - `label:` + `details:` items → left-accent-bar block (`.cv-labeled-entry`), used for grants.
+- The `render-cv.yml` GitHub Action was **deleted on purpose** (it validated/committed a PDF). Do not reinstate it; the site no longer publishes a CV PDF.
+
+## Build / CI Notes
+
+- **Prettier version is pinned** in `package.json` (`prettier@3.9.6`, `@shopify/prettier-plugin-liquid@1.11.0`) because CI installs the latest plugin and its Liquid formatting differs across versions. After editing any `.liquid`/`.scss`/`.md`/`.yml`, run `npx prettier . --write` (never touch `_scripts/`) and confirm `npx prettier . --check` is clean before committing, or the Prettier CI job fails.
+- Deploy is automatic: pushing to `main` triggers `deploy.yml` (Jekyll build → purgecss → publish to `gh-pages`). No manual deploy needed.
+- **purgecss** keeps only classes present in built HTML/JR. All classes above are used in templates, so they survive; avoid styles whose class names are only assembled in JS.
+- Root-level source files not meant for the site (`plan.md`, `resume-*.tex`, `*.pdf`) are listed under `exclude:` in `_config.yml`.
+- `assets/js/bibsearch.js` was patched so a URL `#hash` that matches an element id is treated as **anchor navigation** (section jump / cite link), not a bib search filter.
+
+## Known Incidents / Postmortems
+
+- **First push after the redesign: the `Prettier code formatter` CI job failed (deploy itself succeeded).**
+  - _Symptom:_ `deploy.yml` was green and the site published fine, but the `Prettier code formatter` workflow reported a failure on `_layouts/bib.liquid`, while a local `npx prettier . --check` passed.
+  - _Root cause:_ CI does not use a lockfile — it runs `npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid`, which pulls the **latest** `@shopify/prettier-plugin-liquid`. That newer plugin formatted a Liquid block in `bib.liquid` (a `{% highlight %}` indent) differently from the older plugin resolved locally, so the check disagreed.
+  - _Fix:_ pinned exact versions in `package.json` (`prettier@3.9.6`, `@shopify/prettier-plugin-liquid@1.11.0`) to match what CI installs, then reformatted `bib.liquid`.
+  - _Prevention:_ before committing template/style/data changes, format with the pinned toolchain and verify `npx prettier . --check` is clean. If CI's Prettier fails again while local passes, first suspect a plugin version drift — re-check the latest published `@shopify/prettier-plugin-liquid` version and bump the pin to match, then reformat. Note the Prettier job only blocks the check, not the actual Pages deploy.
+
+## Where Content Lives (quick map)
+
+See `README.zh-CN.md` for the human-facing version. In short: identity → `_config.yml` + `_pages/about.md` subtitle; socials → `_data/socials.yml`; web CV → `_data/cv.yml` & `_data/cv_zh.yml`; papers → `_bibliography/papers.bib`; talks → `_bibliography/talks.bib`; venue badges → `_data/venues.yml`; author Chinese names → `_data/coauthors.yml`; colors → `_sass/_variables.scss` & `_sass/_themes.scss`; components → `_sass/_components.scss`; avatar → `assets/img/prof_pic.jpg` (currently the stock placeholder — replace with a real photo, then add a `profile:` block to `about.md`).
