@@ -169,9 +169,9 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// About page quick links
+// Quick links (pill buttons for about page and in-page section nav)
 
-.about-links {
+.quick-links {
   a.btn {
     border: 1px solid color-mix(in srgb, var(--global-theme-color) 55%, transparent);
     border-radius: 999px;

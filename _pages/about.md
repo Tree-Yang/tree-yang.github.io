@@ -80,7 +80,7 @@ My research addresses a fundamental question: **How to design structures that ar
 
 ---
 
-<div class="about-links">
+<div class="quick-links">
   <a class="btn btn-sm z-depth-0" role="button" href="/research/">Research</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/projects/">Projects</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/publications/">Publications</a>

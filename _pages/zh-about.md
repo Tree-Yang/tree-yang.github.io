@@ -80,7 +80,7 @@ latest_posts:
 
 ---
 
-<div class="about-links">
+<div class="quick-links">
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/research/">研究方向</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/projects/">开源程序</a>
   <a class="btn btn-sm z-depth-0" role="button" href="/zh/publications/">学术成果</a>

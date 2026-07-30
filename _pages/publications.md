@@ -13,9 +13,14 @@ nav_order: 3
 
 {% include bib_search.liquid %}
 
+<div class="quick-links">
+  <a class="btn btn-sm z-depth-0" role="button" href="#journal-articles">Journal Articles</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">Conference Papers & Presentations</a>
+</div>
+
 <p class="text-muted">* Corresponding author.</p>
 
-## Journal Articles
+## Journal Articles {#journal-articles}
 
 <div class="publications">
 
@@ -23,7 +28,7 @@ nav_order: 3
 
 </div>
 
-## Conference Papers & Presentations
+## Conference Papers & Presentations {#conference-papers}
 
 <div class="publications">
 
