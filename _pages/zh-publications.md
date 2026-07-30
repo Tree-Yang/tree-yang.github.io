@@ -4,7 +4,7 @@ permalink: /zh/publications/
 title: 学术成果
 description: 期刊论文、会议论文与报告
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 <!-- _pages/zh-publications.md -->

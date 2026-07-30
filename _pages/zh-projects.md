@@ -4,7 +4,7 @@ title: 开源程序
 permalink: /zh/code/
 description: 研究相关软件与工具
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 研究工作中开发的开源工具箱与代码实现。

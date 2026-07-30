@@ -94,12 +94,8 @@ ul.task-list input[type="checkbox"] {
 
 .about-timeline {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   margin: 1.25rem 0 1.5rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
-  }
 
   section {
     border-left: 3px solid color-mix(in srgb, var(--global-theme-color) 30%, transparent);
@@ -529,6 +525,8 @@ ul.task-list input[type="checkbox"] {
     font-size: 2rem;
 
     a {
+      margin: 0 0.7rem;
+
       img {
         width: 1.6rem;
         height: 1.6rem;
