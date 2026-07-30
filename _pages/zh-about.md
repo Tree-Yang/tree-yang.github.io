@@ -2,6 +2,7 @@
 layout: about
 title: 关于
 permalink: /zh/
+display_name: 杨家树
 subtitle: 西安建筑科技大学，土木工程学院，师资博士后
 
 selected_papers: false
@@ -17,10 +18,6 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
-
-**杨家树**
-
-西安建筑科技大学土木工程学院师资博士后。
 
 <div class="about-timeline">
   <section>

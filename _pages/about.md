@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Faculty-oriented Postdoctoral Fellow, School of Civil Engineering, Xi'an University of Architecture and Technology
+subtitle: (杨家树) &middot; Faculty-oriented Postdoctoral Fellow, School of Civil Engineering, Xi'an University of Architecture and Technology
 
 selected_papers: true
 social: true
@@ -17,10 +17,6 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
-
-**Jia-Shu Yang** (杨家树)
-
-Faculty-oriented Postdoctoral Fellow at Xi'an University of Architecture and Technology.
 
 <div class="about-timeline">
   <section>

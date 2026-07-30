@@ -14,8 +14,8 @@ nav_order: 3
 {% include bib_search.liquid %}
 
 <div class="quick-links section-nav">
-  <a class="btn btn-sm z-depth-0" role="button" href="#journal-articles">Journal Articles</a>
-  <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">Conference Papers & Presentations</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="#journal-articles">Journal Articles <i class="fa-solid fa-circle-down"></i></a>
+  <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">Conference Papers & Presentations <i class="fa-solid fa-circle-down"></i></a>
 </div>
 
 <p class="text-muted">* Corresponding author.</p>

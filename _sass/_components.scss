@@ -196,8 +196,97 @@ ul.task-list input[type="checkbox"] {
       font-size: 1rem;
       padding: 0.5rem 1.3rem;
 
+      i {
+        font-size: 0.85em;
+        margin-left: 0.3rem;
+        opacity: 0.75;
+        transition: transform 0.15s ease;
+      }
+
       &:hover {
         background-color: var(--global-theme-color);
+
+        i {
+          opacity: 1;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+// Project cards
+
+.project-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.6rem;
+    border-top: 3px solid var(--global-theme-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1.15rem 1.25rem;
+    transition:
+      box-shadow 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      box-shadow: 0 6px 18px color-mix(in srgb, var(--global-theme-color) 18%, transparent);
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      color: var(--global-text-color);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+    }
+
+    .project-lang {
+      color: var(--global-theme-color);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: var(--global-text-color-light);
+      flex-grow: 1;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin: 0 0 0.85rem;
+    }
+
+    .project-links {
+      a {
+        border: 1px solid color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+        border-radius: 999px;
+        color: var(--global-theme-color);
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 0 0.3rem 0.3rem 0;
+        padding: 0.2rem 0.75rem;
+
+        i {
+          margin-right: 0.25rem;
+        }
+
+        &:hover {
+          background-color: var(--global-theme-color);
+          color: var(--global-hover-text-color);
+          text-decoration: none;
+        }
       }
     }
   }
