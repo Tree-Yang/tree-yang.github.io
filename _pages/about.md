@@ -59,6 +59,8 @@ latest_posts:
   </section>
 </div>
 
+<div class="info-panel" markdown="1">
+
 My research addresses a fundamental question: **How to design structures that are both efficient and reliable under stochastic excitations?**
 
 **Methodological framework:**
@@ -74,7 +76,7 @@ My research addresses a fundamental question: **How to design structures that ar
 - Dimension-reduced probability density evolution for high-dimensional systems
 - Information reuse strategies in reliability-based optimization
 
----
+</div>
 
 <div class="quick-links">
   <a class="btn btn-sm z-depth-0" role="button" href="/research/">Research</a>
