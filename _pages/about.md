@@ -4,7 +4,7 @@ title: Home
 permalink: /
 subtitle: Faculty-oriented Postdoctoral Fellow, School of Civil Engineering, Xi'an University of Architecture and Technology
 
-selected_papers: false
+selected_papers: true
 social: true
 
 announcements:
@@ -80,4 +80,9 @@ My research addresses a fundamental question: **How to design structures that ar
 
 ---
 
-[Research](/research/) &middot; [Projects](/projects/) &middot; [Publications](/publications/) &middot; [CV](/cv/)
+<div class="about-links">
+  <a class="btn btn-sm z-depth-0" role="button" href="/research/">Research</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/projects/">Projects</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/publications/">Publications</a>
+  <a class="btn btn-sm z-depth-0" role="button" href="/cv/">CV</a>
+</div>

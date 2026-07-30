@@ -1,9 +1,42 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"MSSP":
+  url: https://www.sciencedirect.com/journal/mechanical-systems-and-signal-processing
+  color: "#4f46e5"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"RESS":
+  url: https://www.sciencedirect.com/journal/reliability-engineering-and-system-safety
+  color: "#4f46e5"
 
-"Vision":
-  color: "#009f36"
+"PEM":
+  url: https://www.sciencedirect.com/journal/probabilistic-engineering-mechanics
+  color: "#6366f1"
+
+"EESD":
+  url: https://onlinelibrary.wiley.com/journal/10969845
+  color: "#6366f1"
+
+"EngStruct":
+  url: https://www.sciencedirect.com/journal/engineering-structures
+  color: "#4f46e5"
+
+"CMAME":
+  url: https://www.sciencedirect.com/journal/computer-methods-in-applied-mechanics-and-engineering
+  color: "#4f46e5"
+
+"SMO":
+  url: https://link.springer.com/journal/158
+  color: "#6366f1"
+
+"AES":
+  url: https://www.sciencedirect.com/journal/advances-in-engineering-software
+  color: "#6366f1"
+
+"C&G":
+  url: https://www.sciencedirect.com/journal/computers-and-geotechnics
+  color: "#6366f1"
+
+"npj NatHaz":
+  url: https://www.nature.com/npjnathazards/
+  color: "#4f46e5"
+
+"JVE":
+  color: "#818cf8"
