@@ -37,19 +37,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/zh/publications/";
           },
-        },{id: "nav-projects",
-          title: "Projects",
-          description: "Research-related software and tools",
+        },{id: "nav-code",
+          title: "Code",
+          description: "Open-source research software and tools",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/code/";
           },
         },{id: "nav-开源程序",
           title: "开源程序",
           description: "研究相关软件与工具",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/zh/projects/";
+            window.location.href = "/zh/code/";
           },
         },{id: "nav-cv",
           title: "CV",
