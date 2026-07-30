@@ -150,5 +150,6 @@ profile:
 
 - **不要手动部署**，推送到 `main` 即自动发布。
 - 提交前务必跑 `npx prettier . --check`，否则 Prettier CI 会失败（版本已在 `package.json` 锁定）。
+  - 历史事故：首次推送时 `deploy`（部署）成功，但 `Prettier code formatter` 检查在 `_layouts/bib.liquid` 上报红，而本地检查却通过。原因是 CI 每次安装**最新版** `@shopify/prettier-plugin-liquid`，其 Liquid 格式规则与本地旧版不一致。解决办法：已在 `package.json` 精确锁定 `prettier@3.9.6` 与 `@shopify/prettier-plugin-liquid@1.11.0`。若日后再次"本地通过、CI 报红"，多半是该插件出了新版本——把 `package.json` 里的版本升到与最新一致并重新格式化即可。（注意：Prettier 检查失败只影响该检查项，不影响网站实际部署。）
 - 根目录的 `plan.md`、`resume-*.tex`、`*.pdf` 等源文件已在 `_config.yml` 的 `exclude` 中排除，不会发布到线上，可放心保留。
 - 全站强调色只有两种：**靛蓝（主色）+ 琥珀（获奖专用）**，新增元素请沿用，保持风格统一。
