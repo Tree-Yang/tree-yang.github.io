@@ -9,21 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-research",
-          title: "Research",
-          description: "Research overview",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/research/";
-          },
-        },{id: "nav-研究方向",
-          title: "研究方向",
-          description: "研究方向概述",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/zh/research/";
-          },
-        },{id: "nav-publications",
+  },{id: "nav-publications",
           title: "Publications",
           description: "Journal articles, conference papers, and presentations",
           section: "Navigation",
