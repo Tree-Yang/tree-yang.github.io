@@ -329,6 +329,7 @@ filtered_bibtex_keywords:
     blog,
     chinese_journal,
     chinese_title,
+    chinese_booktitle,
     code,
     dimensions,
     eprint,

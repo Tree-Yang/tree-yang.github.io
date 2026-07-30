@@ -47,10 +47,12 @@
 
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <!-- Title (for Chinese entries the Chinese title is primary, English secondary) -->
     {% if entry.chinese_title %}
-      <div class="chinese-title">{{ entry.chinese_title }}</div>
+      <div class="title">{{ entry.chinese_title }}</div>
+      <div class="chinese-title">{{ entry.title }}</div>
+    {% else %}
+      <div class="title">{{ entry.title }}</div>
     {% endif %}
     {% if entry.keywords %}
       <div class="publication-tags" aria-label="Publication topics">
@@ -164,9 +166,17 @@
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+      {% if entry.chinese_journal %}
+        {% capture entrytype %}<em>{{ entry.chinese_journal }}</em> / {{ entry.journal }}{% endcapture %}
+      {% else %}
+        {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+      {% endif %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% if entry.chinese_booktitle %}
+        {% capture entrytype %}<em>{{ entry.chinese_booktitle }}</em> / {{ entry.booktitle }}{% endcapture %}
+      {% else %}
+        {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% endif %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
@@ -191,9 +201,6 @@
     {% endif %}
     {% if entry.language == 'Chinese' %}
       {% capture entrytype %}{{ entrytype }}{{ " (in Chinese)" }}{% endcapture %}
-    {% endif %}
-    {% if entry.chinese_journal %}
-      {% capture entrytype %}{{ entrytype }}{{ " / " }}{{ entry.chinese_journal }}{% endcapture %}
     {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
