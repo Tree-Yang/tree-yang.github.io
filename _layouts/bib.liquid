@@ -101,7 +101,7 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
         {%- capture author_name -%}
-          {%- if entry.language == 'Chinese' and entry.type == 'article' and coauthor_chinese -%}
+          {%- if entry.language == 'Chinese' and coauthor_chinese -%}
             {{ coauthor_chinese }} ({{ author.first }} {{ author_last_html }})
           {%- else -%}
             {{ author.first }} {{ author_last_html }}
