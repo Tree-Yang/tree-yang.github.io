@@ -62,7 +62,7 @@ latest_posts:
 
 <div class="info-panel" markdown="1">
 
-我的研究致力于回答一个核心问题：**如何在随机激励下设计既高效又可靠的结构？**
+我的研究致力于回答一个核心问题：**如何在不同类型与不同来源的随机性下设计既高效又安全的结构/系统？**
 
 </div>
 
@@ -70,29 +70,29 @@ latest_posts:
 
 <div class="topic-cards">
   <div class="topic-card">
-    <span class="topic-icon"><i class="fa-solid fa-diagram-project"></i></span>
-    <h3>基于可靠度的拓扑优化</h3>
-    <p>将动力可靠度约束融入支撑框架结构的拓扑优化。结合概率密度演化方法与双向渐进结构优化（BESO），获得在随机地震激励下满足首次超越概率要求的结构布局。</p>
+    <span class="topic-icon"><i class="fa-solid fa-dice"></i></span>
+    <h3>计算随机力学</h3>
+    <p>研究随机因素下工程结构与动力系统的响应演化规律，并发展相应的概率分析与数值计算方法。</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-wave-square"></i></span>
-    <h3>动力可靠度分析</h3>
-    <p>随机激励下非线性结构首次超越概率的高效评估。概率密度演化方法（PDEM）为响应分析与可靠度评估提供了无需蒙特卡洛抽样的统一框架。</p>
+    <h3>工程不确定性量化与结构可靠度</h3>
+    <p>研究多源、多类型不确定性的表征、传播与量化，以及结构失效概率和时变可靠度的高效评估方法。</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-chart-line"></i></span>
-    <h3>概率密度演化方法</h3>
-    <p>发展降维概率密度演化方程（DR-PDEE）与解耦多概率密度演化方法。这些方法在保持可靠度评估与随机模型修正精度的同时，显著降低高维系统的计算成本。</p>
+    <h3>随机系统灵敏度分析</h3>
+    <p>研究随机变量与设计参数对随机系统响应统计量、失效概率及其他概率性能指标的影响，并提出高效计算方法。</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-sliders"></i></span>
-    <h3>结构优化</h3>
-    <p>基于 PDEM 灵敏度分析与全局收敛移动渐近线法（GCMMA）的动力可靠度约束下参数优化与拓扑优化。</p>
+    <h3>不确定性结构设计优化</h3>
+    <p>研究多源、多类型不确定性因素下的结构优化方法，在经济性与安全性之间实现合理权衡。</p>
   </div>
   <div class="topic-card">
-    <span class="topic-icon"><i class="fa-solid fa-dice"></i></span>
-    <h3>计算随机动力学</h3>
-    <p>随机地震动建模、高维随机变量的 GF-偏差代表点选取，以及随机激励下结构的高效可靠度评估。</p>
+    <span class="topic-icon"><i class="fa-solid fa-diagram-project"></i></span>
+    <h3>可靠性与稳健性拓扑优化</h3>
+    <p>研究以可靠性和稳健性为设计目标或约束的结构拓扑优化方法，获得在不确定性条件下兼具材料效率与安全性的材料与构件布局。</p>
   </div>
 </div>
 

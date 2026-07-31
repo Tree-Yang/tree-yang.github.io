@@ -61,7 +61,7 @@ latest_posts:
 
 <div class="info-panel" markdown="1">
 
-My research addresses a fundamental question: **How to design structures that are both efficient and reliable under stochastic excitations?**
+My research addresses a fundamental question: **How can structures and systems be designed to achieve both efficiency and reliability in the presence of uncertainties of different types and from diverse sources?**
 
 </div>
 
@@ -69,29 +69,29 @@ My research addresses a fundamental question: **How to design structures that ar
 
 <div class="topic-cards">
   <div class="topic-card">
-    <span class="topic-icon"><i class="fa-solid fa-diagram-project"></i></span>
-    <h3>Reliability-Based Topology Optimization</h3>
-    <p>Integrating dynamic reliability constraints into topology optimization of braced frame structures. The probability density evolution method is combined with bi-directional evolutionary structural optimization (BESO) to obtain layouts that satisfy first-passage probability requirements under stochastic seismic excitations.</p>
+    <span class="topic-icon"><i class="fa-solid fa-dice"></i></span>
+    <h3>Computational Stochastic Mechanics</h3>
+    <p>Developing probabilistic and numerical methods to characterize the response of engineering structures and dynamical systems with uncertainties.</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-wave-square"></i></span>
-    <h3>Dynamic Reliability Analysis</h3>
-    <p>Efficient evaluation of first-passage probabilities for nonlinear structures under random excitations. The probability density evolution method (PDEM) provides a unified framework for response analysis and reliability assessment without Monte Carlo sampling.</p>
+    <h3>Uncertainty Quantification and Structural Reliability</h3>
+    <p>Characterizing, propagating, and quantifying uncertainties from multiple sources, and developing efficient methods for assessing structural reliability.</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-chart-line"></i></span>
-    <h3>Probability Density Evolution Methods</h3>
-    <p>Development of dimension-reduced PDEE formulations and decoupled multi-probability density evolution methods. These approaches reduce computational cost for high-dimensional systems while maintaining accuracy in reliability evaluation and stochastic model updating.</p>
+    <h3>Sensitivity Analysis of Stochastic Systems</h3>
+    <p>Studying how random variables and design parameters influence response statistics, probabilities of failure, and other probabilistic performance measures, with an emphasis on efficient sensitivity evaluation.</p>
   </div>
   <div class="topic-card">
     <span class="topic-icon"><i class="fa-solid fa-sliders"></i></span>
-    <h3>Structural Optimization</h3>
-    <p>Parameter and topology optimization under dynamic reliability constraints using PDEM-based sensitivity analysis and globally convergent methods of moving asymptotes (GCMMA).</p>
+    <h3>Structural Design Optimization under Uncertainty</h3>
+    <p>Developing optimization methods for structures subject to multiple sources and types of uncertainties, with the aim of balancing economic efficiency and safety.</p>
   </div>
   <div class="topic-card">
-    <span class="topic-icon"><i class="fa-solid fa-dice"></i></span>
-    <h3>Computational Stochastic Dynamics</h3>
-    <p>Stochastic ground motion modeling, GF-discrepancy-based point selection for high-dimensional random variables, and efficient reliability evaluation for structures subject to random excitations.</p>
+    <span class="topic-icon"><i class="fa-solid fa-diagram-project"></i></span>
+    <h3>Reliability-Based and Robust Topology Optimization</h3>
+    <p>Developing topology optimization methods that incorporate reliability and robustness into the design objectives or constraints, to achieve material and member layouts that are both efficient and safe under uncertainties.</p>
   </div>
 </div>
 
