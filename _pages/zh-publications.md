@@ -19,26 +19,24 @@ nav_order: 2
 </div>
 
 <div class="pub-layout">
-  <div class="pub-main" markdown="1">
-
-<p class="text-muted">* 通讯作者。</p>
-
-## 期刊论文 {#journal-articles .section-heading}
-
-<div class="publications">
-
-{% bibliography %}
-
+  <div class="pub-main">
+    <p class="text-muted">* 通讯作者。</p>
+    <h2 id="journal-articles" class="section-heading">期刊论文</h2>
+    <div class="publications">
+      {% bibliography %}
+    </div>
+  </div>
+  <nav class="pub-year-rail" aria-label="跳转到年份">
+    <ul class="pub-year-rail-list"></ul>
+  </nav>
 </div>
 
-## 会议论文与报告 {#conference-papers .section-heading}
-
-<div class="publications">
-
-{% bibliography -f talks %}
-
-</div>
-
+<div class="pub-layout">
+  <div class="pub-main">
+    <h2 id="conference-papers" class="section-heading">会议论文与报告</h2>
+    <div class="publications">
+      {% bibliography -f talks %}
+    </div>
   </div>
   <nav class="pub-year-rail" aria-label="跳转到年份">
     <ul class="pub-year-rail-list"></ul>

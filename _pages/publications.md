@@ -19,26 +19,24 @@ nav_order: 2
 </div>
 
 <div class="pub-layout">
-  <div class="pub-main" markdown="1">
-
-<p class="text-muted">* Corresponding author.</p>
-
-## Journal Articles {#journal-articles .section-heading}
-
-<div class="publications">
-
-{% bibliography %}
-
+  <div class="pub-main">
+    <p class="text-muted">* Corresponding author.</p>
+    <h2 id="journal-articles" class="section-heading">Journal Articles</h2>
+    <div class="publications">
+      {% bibliography %}
+    </div>
+  </div>
+  <nav class="pub-year-rail" aria-label="Jump to year">
+    <ul class="pub-year-rail-list"></ul>
+  </nav>
 </div>
 
-## Conference Papers & Presentations {#conference-papers .section-heading}
-
-<div class="publications">
-
-{% bibliography -f talks %}
-
-</div>
-
+<div class="pub-layout">
+  <div class="pub-main">
+    <h2 id="conference-papers" class="section-heading">Conference Papers &amp; Presentations</h2>
+    <div class="publications">
+      {% bibliography -f talks %}
+    </div>
   </div>
   <nav class="pub-year-rail" aria-label="Jump to year">
     <ul class="pub-year-rail-list"></ul>
