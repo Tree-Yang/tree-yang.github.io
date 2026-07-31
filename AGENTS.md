@@ -181,7 +181,7 @@ This section documents the customizations layered on top of stock al-folio for *
 
 - Uses the `about` layout. The big page title comes from `_config.yml` `first_name`/`last_name` (EN) or the `display_name` front-matter key (ZH shows `杨家树`). The Chinese name + role live in the `subtitle`. **Do not repeat the name in the body.**
 - **Research was merged into the home page** — there is no standalone `/research/` page. The five research directions are `.topic-cards` embedded directly in the home body, followed by `.quick-links` (Code / Publications / CV).
-- `about` layout supports `selected_papers: true` → renders `@*[selected=true]*` from `papers.bib` via `_includes/selected_papers.liquid`.
+- `about` layout supports `selected_papers: true` → renders `@*[selected=true]*` from `papers.bib` via `_includes/selected_papers.liquid`. The section heading is localized: EN shows "Selected Publications" linking to `/publications/`, ZH shows "代表性论文" linking to `/zh/publications/` (branched on `page.url contains '/zh/'` in `about.liquid`). Both home pages enable it.
 
 ## Bilingual Structure
 
@@ -196,9 +196,11 @@ This section documents the customizations layered on top of stock al-folio for *
 - Supported custom BibTeX fields in use: `abbr`, `bibtex_show`, `abstract`, `selected`, `award` + `award_name`, `preview`, `code`, `location`, `language`, and the **site-specific** `chinese_title`, `chinese_journal`, `chinese_booktitle` (the last three are whitelisted in `_config.yml` `filtered_bibtex_keywords`).
 - **Chinese-language entries render Chinese-primary:** title shows `chinese_title` as the main line and English as the muted secondary line; the venue shows `中文名 / English name` wrapped together in one `<em>` (both italic). This is handled in `bib.liquid`.
 - **Chinese author names:** `_data/coauthors.yml` maps last-name → `chinese` for the four recurring authors (Chen 陈建兵, Yang 杨家树, Weng 翁丽丽, Lyu 律梦泽). For any `language: Chinese` entry, `bib.liquid` renders each mapped author as `中文名 (English)`. The site owner (Yang) is always bold + underlined (`.author > em`). Do **not** add `url` to these coauthors (it would turn every author into a link site-wide).
-- **Award badges** are amber-filled pills (`.links a.award.btn`); the expandable award detail uses the amber border.
+- **Award badges** are amber-filled pills (`.links a.award.btn`); the expandable award detail uses the amber border. The badge icon distinguishes the entry kind (`entry.type` in `bib.liquid`): journal papers (`@article`) show a `fa-trophy`, conference talks (`@inproceedings`, i.e. invited/award talks) show a `fa-microphone-lines`.
 - Journal abbreviation badges come from `_data/venues.yml` (indigo-family colors). Topic/keyword tags are unified to a single indigo pill (`.publication-tag`) — do not reintroduce per-category colors.
 - `assets/img/publication_preview/` holds preview images named `<citekey>.png/.jpg`; add a `preview = {…}` field to a bib entry to show one. Missing preview → left column simply stays blank (expected).
+- **Section headings** on the publications pages carry `{#journal-articles .section-heading}` / `{#conference-papers .section-heading}` (kramdown IAL); `.section-heading` in `_publications.scss` adds the indigo left bar + Font Awesome `::before` icon (`\f518` book-open, `\f3c9` microphone-lines; bundled family name is `'Font Awesome 7 Free'`).
+- **Right-side year rail:** the page body is wrapped in `.pub-layout` (grid: content + 4.5rem rail on ≥992px, hidden below). `assets/js/pub-year-rail.js` scans `h2.bibliography` year headings, assigns `year-XXXX` ids (duplicate years across journal/talks get `-2` suffixes and are not listed), and builds the sticky axis nav with IntersectionObserver highlighting. Its dynamically-added classes (`pub-year-item/link/label/dot`, `active`) survive purgecss because `purgecss.config.js` also scans `_site/**/*.js` — keep them as literals in the JS. The `.pub-main` wrapper needs `markdown="1"` so the `##` headings inside still render.
 
 ## Web CV (`_layouts/cv.liquid`, `_includes/cv/*.liquid`, `_data/cv*.yml`)
 
