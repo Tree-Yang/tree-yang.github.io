@@ -39,7 +39,7 @@ latest_posts:
         <span class="time">2016&ndash;2023</span>
         <div>
           <strong>同济大学</strong>
-          <p>土木工程博士，导师陈建兵教授</p>
+          <p>工学博士，导师陈建兵教授</p>
         </div>
       </li>
       <li>
@@ -53,7 +53,7 @@ latest_posts:
         <span class="time">2012&ndash;2016</span>
         <div>
           <strong>哈尔滨工业大学</strong>
-          <p>土木工程学士</p>
+          <p>工学学士</p>
         </div>
       </li>
     </ul>
