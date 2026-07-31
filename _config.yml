@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Jia-Shu
+first_name: Jiashu
 middle_name:
 last_name: Yang
 contact_note: >
@@ -92,8 +92,8 @@ bing_site_verification: 8DB2112D381D4D795E259B23290A4F51 # out your bing-site-ve
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Jia-Shu Yang # blog_name will be displayed in your blog page
-blog_description: Personal website of Jia-Shu Yang
+blog_name: Jiashu Yang # blog_name will be displayed in your blog page
+blog_description: Personal website of Jiashu Yang
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
