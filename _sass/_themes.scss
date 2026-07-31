@@ -8,8 +8,8 @@
   color-scheme: light;
   --global-bg-color: #{v.$white-color};
   --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{v.$grey-color};
+  --global-text-color: #{v.$grey-900};
+  --global-text-color-light: #5c6672;
   --global-theme-color: #{v.$blue-color};
   --global-hover-color: #{v.$blue-color-dark};
   --global-hover-text-color: #{v.$white-color};

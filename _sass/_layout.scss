@@ -4,10 +4,23 @@
 
 @use "variables" as v;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: v.$font-family-sans;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 
   h1,
   h2,
@@ -16,6 +29,30 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+  }
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
