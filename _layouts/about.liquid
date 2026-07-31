@@ -61,7 +61,11 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        {% if page.url contains '/zh/' %}
+          <a href="{{ '/zh/publications/' | relative_url }}" style="color: inherit">代表性论文</a>
+        {% else %}
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        {% endif %}
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

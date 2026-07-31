@@ -227,6 +227,11 @@
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
+          {%- if entry.type == 'article' -%}
+            <i class="fa-solid fa-trophy"></i>
+          {% else -%}
+            <i class="fa-solid fa-microphone-lines"></i>
+          {% endif -%}
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
       {% endif %}

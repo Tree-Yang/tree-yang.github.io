@@ -5,7 +5,7 @@ permalink: /zh/
 display_name: 杨家树
 subtitle: 西安建筑科技大学，土木工程学院，师资博士后
 
-selected_papers: false
+selected_papers: true
 social: true
 
 announcements:

@@ -18,9 +18,12 @@ nav_order: 2
   <a class="btn btn-sm z-depth-0" role="button" href="#conference-papers">Conference Papers & Presentations <i class="fa-solid fa-circle-down"></i></a>
 </div>
 
+<div class="pub-layout">
+  <div class="pub-main" markdown="1">
+
 <p class="text-muted">* Corresponding author.</p>
 
-## Journal Articles {#journal-articles}
+## Journal Articles {#journal-articles .section-heading}
 
 <div class="publications">
 
@@ -28,10 +31,18 @@ nav_order: 2
 
 </div>
 
-## Conference Papers & Presentations {#conference-papers}
+## Conference Papers & Presentations {#conference-papers .section-heading}
 
 <div class="publications">
 
 {% bibliography -f talks %}
 
 </div>
+
+  </div>
+  <nav class="pub-year-rail" aria-label="Jump to year">
+    <ul class="pub-year-rail-list"></ul>
+  </nav>
+</div>
+
+<script defer src="{{ '/assets/js/pub-year-rail.js' | relative_url | bust_file_cache }}"></script>
