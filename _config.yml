@@ -174,9 +174,12 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages", "_scripts", ".nojekyll"]
 exclude:
   - bin/
+  - AGENTS.md
+  - ANALYTICS.md
+  - CLAUDE.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -191,6 +194,10 @@ exclude:
   - package.json
   - package-lock.json
   - plan.md
+  - QUICKSTART.md
+  - README.zh-CN.md
+  - SEO.md
+  - TROUBLESHOOTING.md
   - resume-zh_CN.tex
   - resume-zh_EN.tex
   - "中文简历.pdf"
