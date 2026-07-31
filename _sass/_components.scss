@@ -412,8 +412,12 @@ ul.task-list input[type="checkbox"] {
       .badge {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
-        min-width: 7rem !important;
+        // Fixed width (not min-width) so badges of different date ranges
+        // share the same left and right edges when centered in the column.
+        display: inline-block;
+        width: 7.5rem !important;
         white-space: nowrap;
+        text-align: center;
       }
     }
   }
