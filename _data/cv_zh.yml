@@ -58,10 +58,11 @@ cv:
         location: 哈尔滨
 
     Research Interests:
-      - bullet: 结构参数优化和拓扑优化
-      - bullet: 结构随机动力学和动力可靠性分析
-      - bullet: 基于动力可靠性的结构参数优化和拓扑优化
-      - bullet: 结构抗震可靠性分析
+      - bullet: 计算随机力学
+      - bullet: 工程不确定性量化与结构可靠度
+      - bullet: 随机系统灵敏度分析
+      - bullet: 不确定性结构设计优化
+      - bullet: 可靠性与稳健性拓扑优化
 
     Grants:
       - label: 国家自然科学基金青年基金项目（C 类），52408212，基于抗震可靠性的高层建筑伸臂桁架智能优化布置方法研究

@@ -1,5 +1,9 @@
 <!doctype html>
+{% if page.url contains '/zh/' %}
+<html lang="zh-CN">
+{% else %}
 <html lang="{{ site.lang }}">
+{% endif %}
   <!-- Head -->
   <head>
     {% if page.redirect %}

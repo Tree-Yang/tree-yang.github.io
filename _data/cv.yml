@@ -43,11 +43,11 @@ cv:
         location: Harbin, China
 
     Research Interests:
-      - bullet: Structural optimization
-      - bullet: Computational stochastic dynamics
-      - bullet: Structural reliability analysis
-      - bullet: Reliability-based design optimization
-      - bullet: Reliability-based topology optimization
+      - bullet: Computational stochastic mechanics
+      - bullet: Uncertainty quantification and structural reliability
+      - bullet: Sensitivity analysis of stochastic systems
+      - bullet: Structural design optimization under uncertainty
+      - bullet: Reliability-based and robust topology optimization
 
     Grants:
       - label: "Young Scientists Fund (No. 52408212), National Natural Science Foundation of China (NSFC)"
@@ -80,7 +80,7 @@ cv:
         date: "2016"
         awarder: Tongji University
       - title: First Prize Scholarship
-        date: "2015"
+        date: "2014, 2015"
         awarder: Harbin Institute of Technology
       - title: National Scholarship of China
         date: "2013"
