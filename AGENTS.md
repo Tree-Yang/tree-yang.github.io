@@ -212,6 +212,29 @@ This section documents the customizations layered on top of stock al-folio for *
   - `label:` + `details:` items → left-accent-bar block (`.cv-labeled-entry`), used for grants.
 - The `render-cv.yml` GitHub Action was **deleted on purpose** (it validated/committed a PDF). Do not reinstate it; the site no longer publishes a CV PDF.
 
+## Google Scholar Citations — Manual Update Required
+
+Citation counts (`_data/citations.yml`, rendered as Scholar badges on the publications pages) **must be refreshed manually from a local machine** — the scheduled `update-citations.yml` workflow cannot do it (see below). Whenever site data is updated and fresh counts are wanted, run:
+
+```bash
+python3 -m venv /tmp/citenv
+/tmp/citenv/bin/pip install scholarly pyyaml
+/tmp/citenv/bin/python bin/update_scholar_citations.py # skips if last_updated is already today
+npx prettier _data/citations.yml --check # generated file is Prettier-clean
+git add _data/citations.yml && git commit -m "Update Google Scholar citations" && git push
+```
+
+Pushing triggers `deploy.yml`, so the site updates automatically. Verified working 2026-10-23 (residential IP fetches fine).
+
+Why the CI workflow can't do it (diagnosed 2026-10-23):
+
+- **Google Scholar blocks GitHub Actions datacenter IPs** — `scholarly` requests get rejected (429/CAPTCHA) from Actions runners. The script, config, and dependencies are fine; only the CI network environment fails.
+- The workflow had **never run** before 2026-10-23: this repo is a fork, and GitHub disables scheduled workflows in forks (`disabled_fork` state) until enabled manually in the Actions tab. If other scheduled workflows silently never run, check their state there first.
+- The script step originally used `set +e` and swallowed failures — runs showed green while nothing updated. Now hardened: script failure turns the run red, timeout raised 90s→300s, `contents: write` granted. **Expect the scheduled runs to stay red** until the IP problem is solved; that is the known state, not a new bug.
+- Even when a CI run succeeds, its `GITHUB_TOKEN` push does not trigger `deploy.yml` (GitHub never chains workflows off `GITHUB_TOKEN`), so the site would only show new counts after the next regular push.
+
+If full automation is ever wanted: a SerpAPI key (`scholarly` supports it natively) fixes the IP blocking; a PAT (the commented `token:` line in `update-citations.yml`) or an explicit `workflow_dispatch` call fixes the deploy chaining.
+
 ## Build / CI Notes
 
 - **Prettier version is pinned** in `package.json` (`prettier@3.9.6`, `@shopify/prettier-plugin-liquid@1.11.0`) because CI installs the latest plugin and its Liquid formatting differs across versions. After editing any `.liquid`/`.scss`/`.md`/`.yml`, run `npx prettier . --write` (never touch `_scripts/`) and confirm `npx prettier . --check` is clean before committing, or the Prettier CI job fails.
@@ -230,4 +253,4 @@ This section documents the customizations layered on top of stock al-folio for *
 
 ## Where Content Lives (quick map)
 
-See `README.zh-CN.md` for the human-facing version. In short: identity → `_config.yml` + `_pages/about.md` subtitle; socials → `_data/socials.yml`; web CV → `_data/cv.yml` & `_data/cv_zh.yml`; papers → `_bibliography/papers.bib`; talks → `_bibliography/talks.bib`; venue badges → `_data/venues.yml`; author Chinese names → `_data/coauthors.yml`; colors → `_sass/_variables.scss` & `_sass/_themes.scss`; components → `_sass/_components.scss`; avatar → `assets/img/prof_pic.jpg` (currently the stock placeholder — replace with a real photo, then add a `profile:` block to `about.md`).
+See `README.zh-CN.md` for the human-facing version. In short: identity → `_config.yml` + `_pages/about.md` subtitle; socials → `_data/socials.yml`; web CV → `_data/cv.yml` & `_data/cv_zh.yml`; papers → `_bibliography/papers.bib`; talks → `_bibliography/talks.bib`; venue badges → `_data/venues.yml`; author Chinese names → `_data/coauthors.yml`; Google Scholar citation counts → `_data/citations.yml` (**manual** refresh required — see the "Google Scholar Citations" section above); colors → `_sass/_variables.scss` & `_sass/_themes.scss`; components → `_sass/_components.scss`; avatar → `assets/img/prof_pic.jpg` (currently the stock placeholder — replace with a real photo, then add a `profile:` block to `about.md`).
