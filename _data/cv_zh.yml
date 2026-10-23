@@ -113,6 +113,7 @@ cv:
       - bullet: 国际期刊审稿人：
         subitems:
           - "*Structural and Multidisciplinary Optimization*"
+          - "*Structural Safety*"
           - "*Computer Methods in Applied Mechanics and Engineering*"
           - "*Reliability Engineering & System Safety*"
           - "*Mechanical Systems and Signal Processing*"
