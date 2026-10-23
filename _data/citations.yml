@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-08-01'
+  last_updated: '2026-10-23'
 papers:
   7jq__N4AAAAJ:5Ul4iDaHHb8C:
-    citations: 73
+    citations: 75
     title: Structural optimization considering dynamic reliability constraints via probability density evolution method and change of probability measure
     year: '2020'
   7jq__N4AAAAJ:5awf1xo2G04C:
@@ -10,11 +10,11 @@ papers:
     title: Accelerated stochastic model updating via decoupled multi-probability density evolution method with augmented change of probability measure
     year: '2026'
   7jq__N4AAAAJ:BrmTIyaxlBUC:
-    citations: 20
+    citations: 21
     title: Application of interval field method to the stability analysis of slopes in presence of uncertainties
     year: '2023'
   7jq__N4AAAAJ:D_sINldO8mEC:
-    citations: 28
+    citations: 29
     title: An efficient approach for dynamic-reliability-based topology optimization of braced frame structures with probability density evolution method
     year: '2022'
   7jq__N4AAAAJ:HE397vMXCloC:
@@ -26,35 +26,35 @@ papers:
     title: "\u7ED3\u5408\u6982\u7387\u5BC6\u5EA6\u6F14\u5316\u2011\u6982\u7387\u6D4B\u5EA6\u53D8\u6362\u4E0E\u91CF\u5B50\u7C92\u5B50\u7FA4\u4F18\u5316\u7B97\u6CD5\u7684\u7ED3\u6784\u52A8\u529B\u53EF\u9760\u6027\u4F18\u5316\u8BBE\u8BA1"
     year: '2026'
   7jq__N4AAAAJ:PELIpwtuRlgC:
-    citations: 5
+    citations: 6
     title: An efficient strategy for information reuse in probability density evolution method considering large shift of distributions with multiple random variables
     year: '2025'
   7jq__N4AAAAJ:SdhP9T11ey4C:
-    citations: 13
+    citations: 20
     title: Structural design optimization under stochastic excitations considering first-passage probability constraint based on dimension-reduced probability density evolution equation
     year: '2025'
   7jq__N4AAAAJ:VOx2b1Wkg3QC:
-    citations: 3
+    citations: 4
     title: "\u52A8\u529B\u53EF\u9760\u5EA6\u7EA6\u675F\u4E0B\u57FA\u4E8E\u6982\u7387\u6D4B\u5EA6\u53D8\u6362-\u5168\u5C40\u6536\u655B\u79FB\u52A8\u6E10\u8FD1\u7EBF\u6CD5\u7684\u7ED3\u6784\u4F18\u5316\u8BBE\u8BA1"
     year: '2022'
   7jq__N4AAAAJ:WA5NYHcadZ8C:
-    citations: 13
+    citations: 16
     title: Seismic topology optimization considering first-passage probability by incorporating probability density evolution method and bi-directional evolutionary structural optimization
     year: '2024'
   7jq__N4AAAAJ:XiVPGOgt02cC:
-    citations: 13
+    citations: 15
     title: Structural design optimization under dynamic reliability constraints based on probability density evolution method and quantum-inspired optimization algorithm
     year: '2023'
   7jq__N4AAAAJ:bnK-pcrLprsC:
-    citations: 31
+    citations: 34
     title: Structural design optimization under dynamic reliability constraints based on the probability density evolution method and highly-efficient sensitivity analysis
     year: '2022'
   7jq__N4AAAAJ:dTyEYWd-f8wC:
-    citations: 8
+    citations: 14
     title: 'Assessing extent of building damage following an earthquake: case study of the 2023 Turkey-Syria doublet'
     year: '2025'
   7jq__N4AAAAJ:eMMeJKvmdy0C:
-    citations: 11
+    citations: 12
     title: An approximate decoupled reliability-based design optimization method for efficient design exploration of linear structures under random loads
     year: '2024'
   7jq__N4AAAAJ:eflP2zaiRacC:
@@ -62,7 +62,7 @@ papers:
     title: A gradient-free approach for dynamic-reliability-based design optimization based on the probability density evolution method
     year: '2022'
   7jq__N4AAAAJ:eq2jaN3J8jMC:
-    citations: 1
+    citations: 2
     title: Time-variant reliability analysis of corroded gas pipelines considering dynamic defect evolution and interaction
     year: '2026'
   7jq__N4AAAAJ:fQNAKQ3IYiAC:
@@ -70,11 +70,11 @@ papers:
     title: Structural optimization under dynamic reliability constraints utilizing probability density evolution method and metamodels in augmented input space
     year: '2022'
   7jq__N4AAAAJ:olpn-zPbct0C:
-    citations: 43
+    citations: 47
     title: "Seismic damage analysis due to near\u2010fault multipulse ground motion"
     year: '2023'
   7jq__N4AAAAJ:q3oQSFYPqjQC:
-    citations: 55
+    citations: 59
     title: "An energy\u2010frequency parameter for earthquake ground motion intensity measure"
     year: '2023'
   7jq__N4AAAAJ:t6usbXjVLHcC:
@@ -82,7 +82,7 @@ papers:
     title: MatLab and Julia Toolboxes for Physically-Driven DR-PDEE
     year: '2023'
   7jq__N4AAAAJ:tkaPQYYpVKoC:
-    citations: 24
+    citations: 31
     title: High-efficient non-iterative reliability-based design optimization based on the design space virtually conditionalized reliability evaluation method
     year: '2025'
   7jq__N4AAAAJ:wbdj-CoPYUoC:

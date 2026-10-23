@@ -10,6 +10,9 @@ on:
 jobs:
   update-citations:
     runs-on: ubuntu-latest
+    permissions:
+      # Needed so GITHUB_TOKEN can push the citations commit
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -49,7 +52,7 @@ jobs:
           set +e
           echo "🚀 Running citation update script (single attempt)..."
           start_time=$(date)
-          timeout 90 python bin/update_scholar_citations.py
+          timeout 300 python bin/update_scholar_citations.py
           status=$?
           end_time=$(date)
           if [ $status -eq 0 ]; then
@@ -58,6 +61,8 @@ jobs:
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ Failing this step so the run status reflects the real outcome (was silently green before)."
+            exit 1
           fi
           set -e
 
